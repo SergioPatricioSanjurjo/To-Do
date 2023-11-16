@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "user": "admin",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "user": "sergio",
+      "password": "sanjurjo",
+      "id": 2
+    }
+  ],
+  "toDos":[
+    {
+      "user": "sergio",
+      "priority": 7,
+      "activity": "check YouTics",
+      "info": "get clues on obserbables",
+      "id": 1
+    },
+    {
+      "user": "sergio",
+      "priority": 2,
+      "activity": "check YouTics",
+      "info": "get clues on globals",
+      "id": 2
+    },
+    {
+      "user": "admin",
+      "priority": 5,
+      "activity": "Vibe Check",
+      "info": "Howdy",
+      "id": 3
+    }
+  ]
+}
