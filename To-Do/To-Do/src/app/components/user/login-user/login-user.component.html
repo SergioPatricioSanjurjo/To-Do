@@ -1,0 +1,22 @@
+<fieldset>
+    <legend>Iniciar Sesion</legend>
+    <form [formGroup]="userForm">
+      <div class="campo">
+        <label for="user">USUARIO: </label>
+        <input type="text" 
+                id="idLogUser"
+                placeholder="Usuario..."
+                formControlName="user">
+      </div>
+      <div class="campo">
+        <label for="pass">Contraseña: </label>
+        <input type="password" 
+                id="idLogPAss" 
+                placeholder="Contraseña..."
+                formControlName="pass">
+      </div>
+      <div class="campo">
+        <input type="submit" value="Iniciar Sesion" (click)="userLogIn()">
+      </div>
+    </form>
+  </fieldset>
