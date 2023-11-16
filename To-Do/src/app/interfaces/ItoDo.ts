@@ -1,5 +1,5 @@
 export interface ItoDo{
-    user:string,
+    user?:string,
     priority:number,
     task: string,
     details:string,

@@ -33,9 +33,9 @@
     },
     {
       "user": "tisanti",
-      "priority": 5,
-      "activity": "Vibe Check",
-      "info": "Howdy",
+      "priority": 4,
+      "task": null,
+      "details": null,
       "id": 3
     }
   ]

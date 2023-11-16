@@ -39,8 +39,19 @@ export class ListTodoComponent implements OnInit{
     })
   }
 
-  editTask(toDo: ItoDo) {}
-
-  deleteTask(id: number) {}
+  deleteTask(id: number) {
+    const ok = confirm(`Desea eliminar el task con el id: ${id}`)
+    if(!ok) return;
+    this.toDoService.deleteToDo(id).subscribe(
+      {
+        next: () =>{
+          alert(`El task fue eliminado`)
+        },
+        error: (err) =>{
+          console.log(err);
+        }
+      }
+    )
+  }
 
 }

@@ -1,0 +1,52 @@
+div {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
+
+
+h1{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+thead th{
+    background-color: #363636;
+    font-size: 1.5rem;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    opacity: .8;
+    border-style: solid;
+    border-width: 0.1rem;
+}
+
+tbody td{
+    background-color: #363636;
+    font-size: larger;
+    color: lightskyblue;
+    text-align: left;
+    padding: 1rem;
+    opacity: .8;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.1rem;
+}
+
+.btnDelete{
+    color: red;
+    cursor: pointer;
+}
+
+.btnEdit{
+    color: white;
+    cursor: pointer;
+}
