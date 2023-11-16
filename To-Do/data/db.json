@@ -9,9 +9,14 @@
       "user": "sergio",
       "password": "sanjurjo",
       "id": 2
+    },
+    {
+      "user": "tisanti",
+      "pass": "spiderman",
+      "id": 3
     }
   ],
-  "toDos":[
+  "toDos": [
     {
       "user": "sergio",
       "priority": 7,

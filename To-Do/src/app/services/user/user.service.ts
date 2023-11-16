@@ -33,12 +33,12 @@ export class UserService {
       users.find(u => {
         if (u.pass === pass && u.user === user) {
           this.logUser = u;
-          localStorage.setItem('token', u.user.toString())
+          localStorage.setItem('token', u.id.toString())
           this.router.navigate(['/userHome']) 
-        }else{
+        }/*else{
           alert('Usuario o Contraseña Incorrectos')
           this.router.navigate(['home'])
-        }
+        }*/
       });
     });
   }
