@@ -1,6 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs';
 import { ItoDo } from 'src/app/interfaces/ItoDo';
+import { Iuser } from 'src/app/interfaces/Iuser';
 import { ToDoService } from 'src/app/services/toDo/to-do.service';
+import { UserService } from 'src/app/services/user/user.service';
+
 
 @Component({
   selector: 'app-list-todo',
@@ -9,15 +14,30 @@ import { ToDoService } from 'src/app/services/toDo/to-do.service';
 })
 export class ListTodoComponent implements OnInit{
 
-  constructor(private toDoService: ToDoService) { }
+  constructor(private toDoService: ToDoService, private http: HttpClient, private userService: UserService) { }
 
   taskList: ItoDo[] | undefined = [];
 
+  private url:string = 'http://localhost:4000/users'
+
   ngOnInit(): void {
     this.showTasks()
+    console.log(this.getUser);
   }
 
-  showTasks() {}
+  get getUser():Iuser | undefined{
+    return this.userService.currentUser;
+  }
+
+  showTasks() {
+    this.toDoService.getToDos().pipe(
+      map((td:ItoDo[]) => td.filter(td => td.user === this.getUser?.user)) // recibe todos los tasks y los filtra segun el usuario logeado
+    ).subscribe({
+      next: (td) =>{
+        this.taskList = td; // aca se cargan los tasks filtrados
+      },
+    })
+  }
 
   editTask(toDo: ItoDo) {}
 
