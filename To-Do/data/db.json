@@ -19,6 +19,11 @@
       "user": "otramenti",
       "pass": "argentina",
       "id": 4
+    },
+    {
+      "user": "rookie",
+      "pass": "lamelo",
+      "id": 5
     }
   ],
   "toDos": [
@@ -35,6 +40,20 @@
       "task": "irse",
       "details": "tiene que irse de la seleccion",
       "id": 2
+    },
+    {
+      "user": "tisanti",
+      "priority": 4,
+      "task": "de chill",
+      "details": "a ver con el dolar",
+      "id": 3
+    },
+    {
+      "user": "rookie",
+      "priority": 7,
+      "task": "ganar partido",
+      "details": "jugar partido de la nba y ganarlo",
+      "id": 4
     }
   ]
 }

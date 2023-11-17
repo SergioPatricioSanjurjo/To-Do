@@ -35,13 +35,13 @@ export class ToDoService {
     return this.http.post<ItoDo>(`${this.url}/toDos`, body, {'headers': headers})
   }
 
-  /*putTodo(toDo: ItoDo): Observable<ItoDo> {
-    let headers = {'content-type': 'application/json'}  
+  putTodo(toDo: ItoDo): Observable<ItoDo> {
+    let headers = {'Content-type': 'application/json'}  
     let body = JSON.stringify(toDo);
-    return this.http.put<ItoDo>(this.url, body, {'headers': headers})
-  }*/
-
-  putTodo(task: ItoDo): Observable<ItoDo>{
-    return this.http.put<ItoDo>(`${this.url}/${task.id}`, task, {headers: {'Content-type': 'application/json'}})
+    return this.http.put<ItoDo>(`${this.url}/${toDo.id}`, body, {'headers': headers})
   }
+
+  /*putTodo(task: ItoDo): Observable<ItoDo>{
+    return this.http.put<ItoDo>(`${this.url}/${task.id}`, task, {headers: {'Content-type': 'application/json'}})
+  }*/
 }
