@@ -1,1 +1,27 @@
-<p>new-todo works!</p>
+<div class="main">
+    <section class="seccion">
+        <fieldset>
+            <legend>Agregar Tarea</legend>
+            <form id="formulario" (ngSubmit)="agregarTask()" [formGroup]="formulario">
+                <div class="campo">
+                    <label for="prioridad">Prioridad:</label>
+                    <input type="number" id="prioridad" min="1" max="10" formControlName="priority">
+                </div>
+                <div class="campo">
+                    <label for="activity">Actividad:</label>
+                    <input type="text" id="actividad" formControlName="activity">
+                </div>
+                <div class="campo">
+                    <label for="info">Describa su actividad:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" formControlName="info"></textarea>
+                </div>
+                <div class="campo">
+                    <input type="hidden" id="id" name="id">
+                </div>
+                <div class="campo">
+                    <input type="submit" value="Agregar actividad" id="agregar">
+                </div>
+            </form>
+        </fieldset>
+    </section>
+</div>

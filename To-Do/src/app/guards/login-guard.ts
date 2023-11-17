@@ -10,7 +10,7 @@ function checkAuthStatus(): boolean | Observable<boolean>{
                     .pipe(
                         tap( isAuth => {
                             if(isAuth){
-                                router.navigate(['/private'])
+                                router.navigate(['/userHome'])
                             }
                         }),
                         map(isAuth => !isAuth)

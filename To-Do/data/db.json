@@ -9,29 +9,44 @@
       "user": "sergio",
       "password": "sanjurjo",
       "id": 2
-    }
-  ],
-  "toDos":[
-    {
-      "user": "sergio",
-      "priority": 7,
-      "activity": "check YouTics",
-      "info": "get clues on obserbables",
-      "id": 1
     },
     {
-      "user": "sergio",
-      "priority": 2,
-      "activity": "check YouTics",
-      "info": "get clues on globals",
+      "user": "tisanti",
+      "pass": "spiderman",
+      "id": 3
+    },
+    {
+      "user": "otramenti",
+      "pass": "argentina",
+      "id": 4
+    },
+    {
+      "user": "rookie",
+      "pass": "lamelo",
+      "id": 5
+    }
+  ],
+  "toDos": [
+    {
+      "user": "otramenti",
+      "priority": 10,
+      "task": "irse",
+      "details": "tiene que irse de la seleccion ya mismo!",
       "id": 2
     },
     {
-      "user": "admin",
-      "priority": 5,
-      "activity": "Vibe Check",
-      "info": "Howdy",
+      "user": "tisanti",
+      "priority": 4,
+      "task": "de chill",
+      "details": "re alto el dolar no?",
       "id": 3
+    },
+    {
+      "user": "rookie",
+      "priority": 8,
+      "task": "ganar partido",
+      "details": "rookie of the year",
+      "id": 4
     }
   ]
 }

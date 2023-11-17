@@ -13,6 +13,7 @@ export class NewUserComponent {
   userForm:FormGroup = this.formsBulider.group({
     user:['',[Validators.required, Validators.minLength(5)]],
     pass:['',[Validators.required, Validators.minLength(5)]],
+    id: 0
   })
 
   constructor(private userService: UserService,
@@ -24,7 +25,8 @@ export class NewUserComponent {
 
     const user: Iuser = {
       user: this.userForm.controls['user'].value,
-      pass: this.userForm.controls['pass'].value
+      pass: this.userForm.controls['pass'].value,
+      id: 0
     }
     this.userService.postUser(user)
     console.log(user);

@@ -1,3 +1,4 @@
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,6 +20,13 @@ import { LoggedNavbarComponent } from './components/shared/logged-navbar/logged-
 import { NewTodoComponent } from './components/toDo/new-todo/new-todo.component';
 import { EditTodoComponent } from './components/toDo/edit-todo/edit-todo.component';
 import { ListTodoComponent } from './components/toDo/list-todo/list-todo.component';
+import { EditTaskPageComponent } from './pages/edit-task-page/edit-task-page.component';
+import { NewTaskPageComponent } from './pages/new-task-page/new-task-page.component';
+import { DolarComponent } from './components/exchange/dolar/dolar.component';
+import { CurrencyPageComponent } from './pages/currency-page/currency-page.component';
+import { CurrencyComponent } from './components/exchange/currency/currency.component';
+
+
 
 @NgModule({
   declarations: [
@@ -36,13 +44,19 @@ import { ListTodoComponent } from './components/toDo/list-todo/list-todo.compone
     LoggedNavbarComponent,
     NewTodoComponent,
     EditTodoComponent,
-    ListTodoComponent
+    ListTodoComponent,
+    EditTaskPageComponent,
+    NewTaskPageComponent,
+    DolarComponent,
+    CurrencyPageComponent,
+    CurrencyComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CanvasJSAngularChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
