@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, catchError } from 'rxjs';
 import { ItoDo } from 'src/app/interfaces/ItoDo';
 import { enviroments } from 'src/environments/environments';
 
@@ -35,13 +35,26 @@ export class ToDoService {
     return this.http.post<ItoDo>(`${this.url}/toDos`, body, {'headers': headers})
   }
 
-  putTodo(toDo: ItoDo): Observable<ItoDo> {
-    let headers = {'content-type': 'application/json'}  
+  /*putTodo(toDo: ItoDo): Observable<ItoDo> {
+    let headers = {'Content-type': 'application/json'}  
     let body = JSON.stringify(toDo);
+    return this.http.put<ItoDo>(`${this.url}/${toDo.id}`, body, {'headers': headers})
+  }*/
+
+  putTodo(toDo: ItoDo): Observable<ItoDo> {
+    let headers = {'Content-type': 'application/json'}  
+    let body = JSON.stringify(toDo);
+    
     return this.http.put<ItoDo>(`${this.url}/toDos/${toDo.id}`, body, {'headers': headers})
+      .pipe(
+        catchError((error: any) => {
+          console.error('Error in PUT request:', error);
+          throw error; // Rethrow the error to propagate it further
+        })
+      );
   }
 
-
-
-
+  /*putTodo(task: ItoDo): Observable<ItoDo>{
+    return this.http.put<ItoDo>(`${this.url}/${task.id}`, task, {headers: {'Content-type': 'application/json'}})
+  }*/
 }

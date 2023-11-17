@@ -1,3 +1,4 @@
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,8 +20,9 @@ import { LoggedNavbarComponent } from './components/shared/logged-navbar/logged-
 import { NewTodoComponent } from './components/toDo/new-todo/new-todo.component';
 import { EditTodoComponent } from './components/toDo/edit-todo/edit-todo.component';
 import { ListTodoComponent } from './components/toDo/list-todo/list-todo.component';
+import { EditTaskPageComponent } from './pages/edit-task-page/edit-task-page.component';
+import { NewTaskPageComponent } from './pages/new-task-page/new-task-page.component';
 import { DolarComponent } from './components/exchange/dolar/dolar.component';
-import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { CurrencyPageComponent } from './pages/currency-page/currency-page.component';
 import { CurrencyComponent } from './components/exchange/currency/currency.component';
 
@@ -43,6 +45,8 @@ import { CurrencyComponent } from './components/exchange/currency/currency.compo
     NewTodoComponent,
     EditTodoComponent,
     ListTodoComponent,
+    EditTaskPageComponent,
+    NewTaskPageComponent,
     DolarComponent,
     CurrencyPageComponent,
     CurrencyComponent

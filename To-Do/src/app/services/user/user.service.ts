@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Iuser } from 'src/app/interfaces/Iuser';
-import { Observable, catchError, map, of, tap } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, map, of, tap } from 'rxjs';
 import { enviroments } from 'src/environments/environments';
 
 
@@ -80,6 +80,7 @@ export class UserService {
     localStorage.clear()
   }
 
+  private currentUserSubject = new BehaviorSubject<any>(null);
 
   //*-----------------ADMIN/MODIF-SI-CABE--------------------------------*//
   async deleteUser(id: number){
