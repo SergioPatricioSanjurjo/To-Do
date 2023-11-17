@@ -9,13 +9,46 @@ import { CurrencyService } from 'src/app/services/currency/currency.service';
 })
 export class CurrencyComponent implements OnInit{
 
-  currencyList: Icurrency | undefined;
+  currencyEuro: Icurrency | undefined;
+  currencyReal: Icurrency | undefined;
+  currencyPChi: Icurrency | undefined;
+  currencyPUru: Icurrency | undefined;
 
   constructor (private currencyService: CurrencyService) { }
 
   ngOnInit(): void {
-    
+    this.showEuro();
+    this.showReal();
+    this.showPChile();
+    this.showPUruguay();
   }
+
+  showEuro() {
+    this.currencyService.getEuro()
+      .subscribe(data => { 
+        this.currencyEuro = data
+      })
+  }
+  showReal() {
+    this.currencyService.getReal()
+      .subscribe(data => { 
+        this.currencyReal = data
+      })
+  }
+  showPChile() {
+    this.currencyService.getPChile()
+      .subscribe(data => { 
+        this.currencyPChi = data
+      })
+  }
+  showPUruguay() {
+    this.currencyService.getPUruguay()
+      .subscribe(data => { 
+        this.currencyPUru = data
+      })
+  }
+
+
 
 
 }

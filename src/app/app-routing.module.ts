@@ -11,13 +11,13 @@ import { NewTaskPageComponent } from './pages/new-task-page/new-task-page.compon
 import { CurrencyPageComponent } from './pages/currency-page/currency-page.component';
 
 const routes: Routes = [
-  {path:'home', component:HomePageComponent},
-  {path:'newUser', component:NewUserPageComponent},
-  {path:'currency', component:CurrencyPageComponent},
+  {path:'home', component:HomePageComponent, canActivate:[LoginGuard]},
+  {path:'newUser', component:NewUserPageComponent, canActivate:[LoginGuard]},
   {path:'login', component:LoginPageComponent, canActivate:[LoginGuard]},
   {path:'userHome', component:UserHomePageComponent, canActivate:[AuthGuard]},
-  {path:'newTask', component:NewTaskPageComponent},
-  {path:'editTask/:id', component:EditTodoComponent},
+  {path:'newTask', component:NewTaskPageComponent, canActivate:[AuthGuard]},
+  {path:'editTask/:id', component:EditTodoComponent, canActivate:[AuthGuard]},
+  {path:'currency', component:CurrencyPageComponent, canActivate:[AuthGuard]},
   {path:'**', redirectTo:'home'}
 ];
 
