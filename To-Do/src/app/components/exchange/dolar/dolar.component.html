@@ -1,0 +1,27 @@
+<h2>Valores de Mercado</h2>
+<div id="dolarsGraph">
+    <canvasjs-chart [options]="chartOptions" 
+                    [styles]="{width: '100%', height:'500px'}">
+    </canvasjs-chart>   
+</div>
+<hr>
+<div id="dolarTable">
+    <table>
+        <thead>
+            <tr>
+                <th>DOLAR</th>
+                <th>COMPRA</th>
+                <th>VENTA</th>
+                <th>Actualizado</th>
+            </tr>
+        </thead>
+        <tbody id="clientes">
+            <tr *ngFor="let item of dolarList">
+                <td>{{item.nombre}}</td>
+                <td>{{item.compra}}</td>
+                <td>{{item.venta}}</td>
+                <td>{{item.fechaActualizacion}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

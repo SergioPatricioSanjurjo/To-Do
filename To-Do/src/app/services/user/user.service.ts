@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Iuser } from 'src/app/interfaces/Iuser';
 import { Observable, catchError, map, of, tap } from 'rxjs';
+import { enviroments } from 'src/environments/environments';
+
 
 
 @Injectable({
@@ -10,9 +12,9 @@ import { Observable, catchError, map, of, tap } from 'rxjs';
 })
 export class UserService {
 
-  private url:string = 'http://localhost:4000/users'
+  url:string = enviroments.baseUrl;
   private logUser?: Iuser;
-
+  
 
   constructor(private router: Router,
               private http: HttpClient
@@ -24,7 +26,7 @@ export class UserService {
   }
 
   getUsers(): Observable<Iuser[]> {
-    return this.http.get<Iuser[]>(this.url)
+    return this.http.get<Iuser[]>(`${this.url}/users`)
   }
   
 
@@ -33,33 +35,33 @@ export class UserService {
       users.find(u => {
         if (u.pass === pass && u.user === user) {
           this.logUser = u;
-          localStorage.setItem('token', u.user.toString())
+          enviroments.currentUser = u.user;
+          //localStorage.clear();
+          localStorage.setItem('token', u.id.toString());
           this.router.navigate(['/userHome']) 
-        }else{
-          alert('Usuario o Contraseña Incorrectos')
-          this.router.navigate(['home'])
         }
       });
     });
   }
-
   
   checkStatusAutenticacion(): Observable<boolean> {
     const token = localStorage.getItem('token')
     if (!token) {
       return of(false)
     }
-    return this.http.get<Iuser>(`${this.url}/${token}`)
+    return this.http.get<Iuser>(`${this.url}/users/${token}`)
       .pipe(
         tap(u => this.logUser = u),
-        map(u => !!u),
+        map(u => {
+          console.log('Respuesta', !!u);
+          return !!u}),
         catchError(err => of(false))
       )
   }
 
   async postUser(user: Iuser){
     try{
-      await fetch(this.url,
+      await fetch(`${this.url}/users`,
         {
           method:'POST',
           body: JSON.stringify(user),
@@ -74,6 +76,7 @@ export class UserService {
 
   logout() {
     this.logUser = undefined;
+    enviroments.currentUser = '';
     localStorage.clear()
   }
 
@@ -81,7 +84,7 @@ export class UserService {
   //*-----------------ADMIN/MODIF-SI-CABE--------------------------------*//
   async deleteUser(id: number){
     try{
-      await fetch(`${this.url}/${id}`, { method:'DELETE'})
+      await fetch(`${this.url}/users/${id}`, { method:'DELETE'})
       window.location.href='index.html'
     }catch (error){
       console.log(error);
@@ -90,7 +93,7 @@ export class UserService {
 
   async getUser(id:number){
     try{
-      const resultado = await fetch(`${this.url}/${id}`)
+      const resultado = await fetch(`${this.url}/users/${id}`)
       const user = resultado.json()
       return user;
     }catch (error){
@@ -100,7 +103,7 @@ export class UserService {
 
   async putUser(user: Iuser){
     try{
-      await fetch(`${this.url}/${user.id}`,
+      await fetch(`${this.url}/users/${user.id}`,
                 {
                   method:'PUT',
                   body: JSON.stringify(user),
@@ -115,3 +118,4 @@ export class UserService {
 
   
 }
+
