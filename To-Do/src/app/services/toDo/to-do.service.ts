@@ -43,8 +43,4 @@ export class ToDoService {
   putTodo(task: ItoDo): Observable<ItoDo>{
     return this.http.put<ItoDo>(`${this.url}/${task.id}`, task, {headers: {'Content-type': 'application/json'}})
   }
-
-
-
-
 }

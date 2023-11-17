@@ -54,17 +54,17 @@ export class EditTodoComponent implements OnInit{
     })
   }
 
-  get getUser():Iuser | undefined{
+  /*get getUser():Iuser | undefined{
     return this.userService.currentUser;
-  }
+  }*/
 
   editarTask(){
     if (this.formulario.invalid) return;
 
-    const currentUserValue = this.userService.currentUser?.user;
+    //const currentUserValue = this.userService.currentUser?.user;
 
     const task: ItoDo = {
-      user: currentUserValue,
+      user: this.userService.currentUser?.user,
       priority: this.formulario.controls['priority'].value,
       task: this.formulario.controls['activity'].value,
       details: this.formulario.controls['info'].value,

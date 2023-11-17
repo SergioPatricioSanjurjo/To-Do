@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map } from 'rxjs';
 import { ItoDo } from 'src/app/interfaces/ItoDo';
 import { Iuser } from 'src/app/interfaces/Iuser';
@@ -14,11 +15,9 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class ListTodoComponent implements OnInit{
 
-  constructor(private toDoService: ToDoService, private http: HttpClient, private userService: UserService) { }
+  constructor(private toDoService: ToDoService, private http: HttpClient, private userService: UserService, private router: Router) { }
 
   taskList: ItoDo[] | undefined = [];
-
-  private url:string = 'http://localhost:4000/users'
 
   ngOnInit(): void {
     this.showTasks()
@@ -46,6 +45,7 @@ export class ListTodoComponent implements OnInit{
       {
         next: () =>{
           alert(`El task fue eliminado`)
+          this.showTasks() //no debería poner esto acá, pero no puedo lograr que se actualice la pagina despues de eliminar una tarea
         },
         error: (err) =>{
           console.log(err);

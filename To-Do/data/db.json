@@ -23,39 +23,11 @@
   ],
   "toDos": [
     {
-      "user": "sergio",
-      "priority": 7,
-      "activity": "check YouTics",
-      "info": "get clues on obserbables",
-      "id": 1
-    },
-    {
-      "user": "sergio",
-      "priority": 2,
-      "activity": "check YouTics",
-      "info": "get clues on globals",
-      "id": 2
-    },
-    {
-      "user": "tisanti",
-      "priority": 7,
-      "task": "terminar new task",
-      "details": "tengo que hacer la parte de crear una nueva tarea",
-      "id": 3
-    },
-    {
-      "user": "tisanti",
-      "priority": 2,
-      "task": "probando new task",
-      "details": "estoy viendo si funciona esto jiji",
-      "id": 4
-    },
-    {
       "user": "otramenti",
       "priority": 10,
       "task": "irse",
-      "details": "tiene que irse de la seleccion",
-      "id": 5
+      "details": "saquenlo de la seleccion",
+      "id": 7
     }
   ]
 }
