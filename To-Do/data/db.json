@@ -14,6 +14,11 @@
       "user": "tisanti",
       "pass": "spiderman",
       "id": 3
+    },
+    {
+      "user": "otramenti",
+      "pass": "argentina",
+      "id": 4
     }
   ],
   "toDos": [
@@ -33,10 +38,24 @@
     },
     {
       "user": "tisanti",
-      "priority": 4,
-      "task": null,
-      "details": null,
+      "priority": 7,
+      "task": "terminar new task",
+      "details": "tengo que hacer la parte de crear una nueva tarea",
       "id": 3
+    },
+    {
+      "user": "tisanti",
+      "priority": 2,
+      "task": "probando new task",
+      "details": "estoy viendo si funciona esto jiji",
+      "id": 4
+    },
+    {
+      "user": "otramenti",
+      "priority": 10,
+      "task": "irse",
+      "details": "tiene que irse de la seleccion",
+      "id": 5
     }
   ]
 }

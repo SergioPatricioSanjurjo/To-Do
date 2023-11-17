@@ -20,6 +20,7 @@ import { NewTodoComponent } from './components/toDo/new-todo/new-todo.component'
 import { EditTodoComponent } from './components/toDo/edit-todo/edit-todo.component';
 import { ListTodoComponent } from './components/toDo/list-todo/list-todo.component';
 import { EditTaskPageComponent } from './pages/edit-task-page/edit-task-page.component';
+import { NewTaskPageComponent } from './pages/new-task-page/new-task-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EditTaskPageComponent } from './pages/edit-task-page/edit-task-page.com
     NewTodoComponent,
     EditTodoComponent,
     ListTodoComponent,
-    EditTaskPageComponent
+    EditTaskPageComponent,
+    NewTaskPageComponent
   ],
   imports: [
     BrowserModule,

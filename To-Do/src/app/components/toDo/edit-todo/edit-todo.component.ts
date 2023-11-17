@@ -61,7 +61,7 @@ export class EditTodoComponent implements OnInit{
   editarTask(){
     if (this.formulario.invalid) return;
 
-    const currentUserValue = this.getUser?.user;
+    const currentUserValue = this.userService.currentUser?.user;
 
     const task: ItoDo = {
       user: currentUserValue,
