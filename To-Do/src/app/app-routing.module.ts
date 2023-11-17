@@ -8,10 +8,12 @@ import { LoginGuard } from './guards/login-guard';
 import { AuthGuard } from './guards/auth-guard';
 import { EditTodoComponent } from './components/toDo/edit-todo/edit-todo.component';
 import { NewTaskPageComponent } from './pages/new-task-page/new-task-page.component';
+import { CurrencyPageComponent } from './pages/currency-page/currency-page.component';
 
 const routes: Routes = [
   {path:'home', component:HomePageComponent},
   {path:'newUser', component:NewUserPageComponent},
+  {path:'currency', component:CurrencyPageComponent},
   {path:'login', component:LoginPageComponent, canActivate:[LoginGuard]},
   {path:'userHome', component:UserHomePageComponent, canActivate:[AuthGuard]},
   {path:'newTask', component:NewTaskPageComponent},
