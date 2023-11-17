@@ -10,10 +10,11 @@
       </div>
       <div class="campo">
         <label for="pass">Contraseña: </label>
-        <input type="password" 
+        <input [type]="showPassword ? 'text' : 'password'" 
                 id="idLogPAss" 
-                placeholder="Contraseña..."
+                placeholder="Contraseña..." 
                 formControlName="pass">
+        <button (click)="toggleVisibility()">{{showPassword ? 'Show' : 'Hide'}}</button>
       </div>
       <div class="campo">
         <input type="submit" value="Iniciar Sesion" (click)="userLogIn()">

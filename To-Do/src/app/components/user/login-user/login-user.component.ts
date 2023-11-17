@@ -29,6 +29,9 @@ export class LoginUserComponent {
                       )
   }
 
+  showPassword: boolean = false;
 
-
+  toggleVisibility(){
+    this.showPassword = !this.showPassword
+  }
 }
