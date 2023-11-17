@@ -28,38 +28,25 @@
   ],
   "toDos": [
     {
-      "user": "tisanti",
-      "priority": 3,
-      "task": "de chill bro",
-      "details": "probando oh yeah!!!",
-      "id": 1
-    },
-    {
       "user": "otramenti",
       "priority": 10,
       "task": "irse",
-      "details": "tiene que irse de la seleccion",
+      "details": "tiene que irse de la seleccion ya mismo!",
       "id": 2
     },
     {
       "user": "tisanti",
       "priority": 4,
       "task": "de chill",
-      "details": "a ver con el dolar",
+      "details": "re alto el dolar no?",
       "id": 3
     },
     {
-      "priority": 7,
-      "task": "ganar partido",
-      "details": "jugar partido de la nba y ganarlo",
-      "id": 4
-    },
-    {
       "user": "rookie",
-      "priority": 2,
-      "task": "de chill",
-      "details": "agrego esto para rookie, y ahora lo edito",
-      "id": 5
+      "priority": 8,
+      "task": "ganar partido",
+      "details": "rookie of the year",
+      "id": 4
     }
   ]
 }
