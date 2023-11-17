@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "user": "admin",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "user": "sergio",
+      "password": "sanjurjo",
+      "id": 2
+    },
+    {
+      "user": "tisanti",
+      "pass": "spiderman",
+      "id": 3
+    },
+    {
+      "user": "otramenti",
+      "pass": "argentina",
+      "id": 4
+    },
+    {
+      "user": "rookie",
+      "pass": "lamelo",
+      "id": 5
+    },
+    {
+      "user": "ragnarap",
+      "pass": "hethet",
+      "id": 6
+    }
+  ],
+  "toDos": [
+    {
+      "user": "otramenti",
+      "priority": 10,
+      "task": "irse",
+      "details": "tiene que irse de la seleccion ya mismo!",
+      "id": 2
+    },
+    {
+      "user": "tisanti",
+      "priority": 4,
+      "task": "de chill",
+      "details": "re alto el dolar no?",
+      "id": 3
+    },
+    {
+      "user": "rookie",
+      "priority": 8,
+      "task": "ganar partido",
+      "details": "rookie of the year",
+      "id": 4
+    },
+    {
+      "user": "tisanti",
+      "priority": 7,
+      "task": "Pepe ",
+      "details": "nananana bartman bergman",
+      "id": 5
+    },
+    {
+      "user": "tisanti",
+      "priority": 1,
+      "task": "hjdfgjhdfj",
+      "details": "uno",
+      "id": 6
+    },
+    {
+      "user": "ragnarap",
+      "priority": 3,
+      "task": "Merch",
+      "details": "levear merchant a job 40",
+      "id": 7
+    }
+  ]
+}
