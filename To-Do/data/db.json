@@ -21,5 +21,20 @@
       "id": 4
     }
   ],
-  "toDos": []
+  "toDos": [
+    {
+      "user": "tisanti",
+      "priority": 3,
+      "task": "de chill bro",
+      "details": "probando oh yeah!!!",
+      "id": 1
+    },
+    {
+      "user": "otramenti",
+      "priority": 10,
+      "task": "irse",
+      "details": "tiene que irse de la seleccion",
+      "id": 2
+    }
+  ]
 }

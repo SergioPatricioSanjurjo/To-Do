@@ -8,7 +8,7 @@ div {
 }
 
 
-h1{
+h2{
     text-align: center;
 }
 
@@ -24,7 +24,6 @@ thead th{
     color: white;
     text-align: left;
     padding: 1rem;
-    opacity: .8;
     border-style: solid;
     border-width: 0.1rem;
 }
@@ -35,7 +34,6 @@ tbody td{
     color: lightskyblue;
     text-align: left;
     padding: 1rem;
-    opacity: .8;
     border-color: white;
     border-style: solid;
     border-width: 0.1rem;
