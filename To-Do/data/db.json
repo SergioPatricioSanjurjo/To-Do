@@ -21,13 +21,5 @@
       "id": 4
     }
   ],
-  "toDos": [
-    {
-      "user": "otramenti",
-      "priority": 10,
-      "task": "irse",
-      "details": "saquenlo de la seleccion",
-      "id": 7
-    }
-  ]
+  "toDos": []
 }
