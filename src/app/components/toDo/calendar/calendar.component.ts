@@ -28,6 +28,7 @@ export class CalendarComponent implements OnInit{
       next: (td) =>{
         this.taskList = td; // aca se cargan los tasks filtrados
         localStorage.setItem('taskList', JSON.stringify(this.taskList)); //guardo la tasklist
+        this.desestructurar() // tengo que llamar esta funcion aca porque sino se cargan los eventos del localStorage anterior
       },error: (err) =>{
         console.log(err);
       }
@@ -48,33 +49,36 @@ export class CalendarComponent implements OnInit{
     return this.taskList
   }*/
 
-  calendarOptions: CalendarOptions = {       //este es el calendario
-      plugins: [dayGridPlugin],
-      initialView: 'dayGridMonth',
-      events: this.eventsList //asigno el arreglo de los eventos de usuario a los eventos del calendario
-    };
-
   desestructurar() {
-    const storedTaskList = localStorage.getItem('taskList');
+    const storedTaskList = localStorage.getItem('taskList'); //traigo la taskList guardada
     if (storedTaskList) {
-      this.taskList = JSON.parse(storedTaskList); //traigo la taskList guardada
+      this.taskList = JSON.parse(storedTaskList); 
     }
-    this.taskList?.forEach((toDo: ItoDo) => { //desestructura el arreglo de tasks, me quedo con el titulo y la fecha
-      const { task, date } = toDo;
+    this.taskList?.forEach((toDo: ItoDo) => {   //recorro el arreglo de tasks del usuario
+      const { task, date } = toDo;   //desestructura el arreglo de tasks, me quedo con el titulo y la fecha
     
-      const eventoFullCalendar = {
+      const eventoFullCalendar = {  // cargo una variable de tipo evento
         title: task,
         date: date
       };
+
       this.eventsList?.push(eventoFullCalendar) //agrego los eventos a la lista de eventos
+    })
+
+    this.calendarOptions = {
+      events: this.eventsList  //asigno el arreglo de los eventos de usuario a los eventos del calendario
     }
-  )}
+  }
+
+  calendarOptions: CalendarOptions | any  //este es el calendario
 
   ngOnInit(): void {
     console.log(this.userService.currentUser?.user);
     this.cargarEvents()
-    this.desestructurar()
-    console.log(this.eventsList);
+    this.calendarOptions = { // cargo el calendar aca porque si no da un error de la API
+      plugins: [dayGridPlugin],
+      initialView: 'dayGridMonth'
+    }
   }
 
 }

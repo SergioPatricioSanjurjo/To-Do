@@ -65,7 +65,7 @@
     {
       "user": "otramenti",
       "priority": 5,
-      "task": "irse",
+      "task": "retirarse porfiss",
       "details": "tiene que irse de la seleccion",
       "date": "2023-11-22",
       "id": 8
@@ -77,6 +77,14 @@
       "details": "partido de eliminatorias contra brasil, muy importante",
       "date": "2023-11-21",
       "id": 9
+    },
+    {
+      "user": "tisanti",
+      "priority": 3,
+      "task": "cargando",
+      "details": "a ver si funciona",
+      "date": "2023-11-27",
+      "id": 12
     }
   ]
 }

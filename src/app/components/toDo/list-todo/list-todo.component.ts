@@ -47,7 +47,6 @@ export class ListTodoComponent implements OnInit{
       {
         next: () =>{
           alert(`El task fue eliminado`)
-          //this.showTasks() //no debería poner esto acá, pero no puedo lograr que se actualice la pagina despues de eliminar una tarea
         },
         error: (err) =>{
           console.log(err);
