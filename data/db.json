@@ -80,11 +80,11 @@
     },
     {
       "user": "tisanti",
-      "priority": 3,
+      "priority": 6,
       "task": "cargando",
-      "details": "a ver si funciona",
-      "date": "2023-11-27",
-      "id": 12
+      "details": "me voy al mes que viene",
+      "date": "2023-12-20",
+      "id": 10
     }
   ]
 }

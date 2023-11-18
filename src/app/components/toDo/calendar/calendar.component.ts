@@ -1,9 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { ToDoService } from 'src/app/services/toDo/to-do.service';
 import { Component, OnInit } from '@angular/core';
 import { ItoDo } from 'src/app/interfaces/ItoDo';
 import { UserService } from 'src/app/services/user/user.service';
-import { Router } from '@angular/router';
 import { map } from 'rxjs';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -15,7 +13,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 })
 export class CalendarComponent implements OnInit{
 
-  constructor(private toDoService: ToDoService, private http: HttpClient, private userService: UserService, private router: Router) { }
+  constructor(private toDoService: ToDoService, private userService: UserService) { }
 
   taskList: ItoDo[] | undefined = [];
 
