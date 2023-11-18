@@ -33,17 +33,11 @@
   ],
   "toDos": [
     {
-      "user": "otramenti",
-      "priority": 10,
-      "task": "irse",
-      "details": "tiene que irse de la seleccion ya mismo!",
-      "id": 2
-    },
-    {
       "user": "tisanti",
       "priority": 6,
       "task": "de chill",
       "details": "re alto el dolar no? se fue a la mierda",
+      "date": "2023-11-20",
       "id": 3
     },
     {
@@ -56,8 +50,9 @@
     {
       "user": "tisanti",
       "priority": 7,
-      "task": "Pepe ",
+      "task": "ELPEPE",
       "details": "nananana bartman bergman",
+      "date": "2023-11-25",
       "id": 5
     },
     {
@@ -66,6 +61,22 @@
       "task": "Merch",
       "details": "levear merchant a job 40",
       "id": 7
+    },
+    {
+      "user": "otramenti",
+      "priority": 5,
+      "task": "irse",
+      "details": "tiene que irse de la seleccion",
+      "date": "2023-11-22",
+      "id": 8
+    },
+    {
+      "user": "otramenti",
+      "priority": 8,
+      "task": "partido en brasil",
+      "details": "partido de eliminatorias contra brasil, muy importante",
+      "date": "2023-11-21",
+      "id": 9
     }
   ]
 }
