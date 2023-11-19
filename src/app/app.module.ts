@@ -29,8 +29,6 @@ import { CalendarComponent } from './components/toDo/calendar/calendar.component
 import { CalendarPageComponent } from './pages/calendar-page/calendar-page.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +62,6 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     CanvasJSAngularChartsModule,
     FullCalendarModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

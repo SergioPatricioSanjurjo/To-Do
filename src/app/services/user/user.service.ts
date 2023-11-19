@@ -6,7 +6,6 @@ import { BehaviorSubject, Observable, catchError, map, of, tap } from 'rxjs';
 import { enviroments } from 'src/environments/environments';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -49,6 +48,14 @@ export class UserService {
       }
     });
   }
+
+
+  checkUsernameExists(username: string): Observable<boolean> {
+    return this.getUsers().pipe(
+      map(users => users.some(u => u.user === username))
+    );
+  }
+
   
   checkStatusAutenticacion(): Observable<boolean> {
     const token = localStorage.getItem('token')
@@ -122,7 +129,5 @@ export class UserService {
       console.log(error);
     }
   }
-
-  
 }
 
