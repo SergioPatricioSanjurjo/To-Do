@@ -14,6 +14,11 @@ fieldset{
     border-radius: 3rem;
     transition-duration: 1s;
 }
+@media (max-width: 1000px){
+    fieldset{
+        opacity: 1;
+    }
+}
 fieldset:hover{
     opacity: 0.9;
 }
@@ -32,12 +37,26 @@ form{
     border-radius: 25px;
     color: var(--c-white);
 }
+@media (max-width: 1000px){
+    form{
+        padding: 0 1rem;
+        font-size: 3rem;
+    }
+}
 .inputs{
     margin: 2rem;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     gap: 1rem;
     text-align: right;
+}
+@media (max-width: 1000px){
+    .inputs{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
 .inputs input{
     background-color:var(--c-white);

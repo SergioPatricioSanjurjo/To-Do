@@ -13,6 +13,11 @@ div {
     align-items: center;
     padding-bottom: 4rem;
 }
+@media(max-width: 1000px){
+    div{
+        margin: .5rem;
+    }
+}
 table {
     width: 80%;
     font-size: 2rem;
@@ -20,15 +25,27 @@ table {
     text-align: center;
     border-collapse: collapse;
 }
+@media(max-width: 1000px){
+    table{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}
 th, td{
     background-color: var(--c-dBlue);
     border: 3px solid var(--c-lBlue);
     padding: 1rem 5rem;
 }
+@media(max-width: 1000px){
+    th, td{
+        padding: .5rem;
+    }
+}
 th{
     background-color: var(--c-lBlue);
     color: var(--c-dBlue);
 }
+
 .btnDelete{
     color: var(--c-lRed);
     text-decoration: none;
