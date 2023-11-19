@@ -17,6 +17,9 @@
                 <span  *ngIf="userForm.controls['user'].getError('minlength') && userForm.get('user')?.touched">
                     Minimo 5 Caracteres
                 </span>
+                <span *ngIf="userForm.controls['user'].hasError('usernameTaken') && userForm.get('user')?.touched">
+                    Nombre de usuario no disponible
+                </span>
             </div>
             <div class="inputs">
                 <label for="idPass">CONTRASEÑA: </label>
