@@ -9,6 +9,7 @@ import { AuthGuard } from './guards/auth-guard';
 import { EditTodoComponent } from './components/toDo/edit-todo/edit-todo.component';
 import { NewTaskPageComponent } from './pages/new-task-page/new-task-page.component';
 import { CurrencyPageComponent } from './pages/currency-page/currency-page.component';
+import { CalendarPageComponent } from './pages/calendar-page/calendar-page.component';
 
 const routes: Routes = [
   {path:'home', component:HomePageComponent, canActivate:[LoginGuard]},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'newTask', component:NewTaskPageComponent, canActivate:[AuthGuard]},
   {path:'editTask/:id', component:EditTodoComponent, canActivate:[AuthGuard]},
   {path:'currency', component:CurrencyPageComponent, canActivate:[AuthGuard]},
+  {path:'calendar', component:CalendarPageComponent, canActivate:[AuthGuard]},
   {path:'**', redirectTo:'home'}
 ];
 

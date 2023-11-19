@@ -29,21 +29,20 @@
       "user": "ragnarap",
       "pass": "hethet",
       "id": 6
+    },
+    {
+      "user": "lamelo",
+      "pass": "ball5",
+      "id": 7
     }
   ],
   "toDos": [
     {
-      "user": "otramenti",
-      "priority": 10,
-      "task": "irse",
-      "details": "tiene que irse de la seleccion ya mismo!",
-      "id": 2
-    },
-    {
       "user": "tisanti",
-      "priority": 4,
+      "priority": 6,
       "task": "de chill",
-      "details": "re alto el dolar no?",
+      "details": "re alto el dolar no? se fue a la mierda",
+      "date": "2023-11-20",
       "id": 3
     },
     {
@@ -56,16 +55,10 @@
     {
       "user": "tisanti",
       "priority": 7,
-      "task": "Pepe ",
-      "details": "fgdgdfg",
+      "task": "ELPEPE",
+      "details": "nananana bartman bergman",
+      "date": "2023-11-25",
       "id": 5
-    },
-    {
-      "user": "tisanti",
-      "priority": 6,
-      "task": "ñeeee",
-      "details": "uno",
-      "id": 6
     },
     {
       "user": "ragnarap",
@@ -75,25 +68,36 @@
       "id": 7
     },
     {
-      "user": "ragnarap",
-      "priority": 7,
-      "task": "Levear Crusa",
-      "details": "llevar a 80 para Rachel",
+      "user": "otramenti",
+      "priority": 5,
+      "task": "retirarse ya mismo",
+      "details": "tiene que irse de la seleccion",
+      "date": "2023-11-22",
       "id": 8
     },
     {
-      "user": "ragnarap",
-      "priority": 10,
-      "task": "Subir Hunter",
-      "details": "Levear el hunter pa farmiar cartas",
+      "user": "otramenti",
+      "priority": 8,
+      "task": "partido en brasil",
+      "details": "partido de eliminatorias contra brasil, muy importante",
+      "date": "2023-11-21",
       "id": 9
     },
     {
-      "user": "ragnarap",
-      "priority": 5,
-      "task": "Levear Aco",
-      "details": "llevar a 35 a porrazos",
+      "user": "tisanti",
+      "priority": 6,
+      "task": "cargando",
+      "details": "me voy al mes que viene",
+      "date": "2023-12-20",
       "id": 10
+    },
+    {
+      "user": "lamelo",
+      "priority": 3,
+      "task": "partido de la nba",
+      "details": "partido contra los toronto raptors",
+      "date": "2023-11-28",
+      "id": 11
     }
   ]
 }

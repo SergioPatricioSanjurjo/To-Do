@@ -47,7 +47,7 @@ export class ListTodoComponent implements OnInit{
       {
         next: () =>{
           alert(`El task fue eliminado`)
-          },
+        },
         error: (err) =>{
           console.log(err);
         }
