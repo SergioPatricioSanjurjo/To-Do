@@ -26,20 +26,17 @@
       "id": 6
     },
     {
-      "user": "lamelo",
-      "pass": "ball5",
-      "id": 8
+      "user": "santi",
+      "pass": "tisanti",
+      "id": 9
+    },
+    {
+      "user": "eltisanti",
+      "pass": "martinez",
+      "id": 10
     }
   ],
   "toDos": [
-    {
-      "user": "tisanti",
-      "priority": 6,
-      "task": "de chill",
-      "details": "re alto el dolar no? se fue a la mierda",
-      "date": "2023-11-20",
-      "id": 3
-    },
     {
       "user": "rookie",
       "priority": 8,
@@ -74,7 +71,7 @@
     },
     {
       "user": "tisanti",
-      "priority": 6,
+      "priority": 8,
       "task": "cargando",
       "details": "me voy al mes que viene",
       "date": "2023-12-20",
@@ -117,7 +114,7 @@
       "priority": 2,
       "task": "Practica",
       "details": "nanananan batman",
-      "date": "2023-11-19",
+      "date": "2023-11-20",
       "id": 15
     },
     {
@@ -127,8 +124,30 @@
       "details": "levear para bow",
       "date": "2023-11-03",
       "id": 16
-      "details": "levear merchant a job 40",
-      "id": 7
+    },
+    {
+      "user": "eltisanti",
+      "priority": 7,
+      "task": "validator",
+      "details": "validator check",
+      "date": "2023-11-24",
+      "id": 17
+    },
+    {
+      "user": "eltisanti",
+      "priority": 8,
+      "task": "excelente",
+      "details": "muy bien!",
+      "date": "2023-11-24",
+      "id": 18
+    },
+    {
+      "user": "eltisanti",
+      "priority": 2,
+      "task": "evento",
+      "details": "probando limite del calendario",
+      "date": "2023-11-23",
+      "id": 19
     }
   ]
 }

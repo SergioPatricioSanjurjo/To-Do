@@ -62,7 +62,6 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     CanvasJSAngularChartsModule,
     FullCalendarModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
