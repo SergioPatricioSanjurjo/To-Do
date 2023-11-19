@@ -28,7 +28,6 @@ import { CurrencyComponent } from './components/exchange/currency/currency.compo
 import { CalendarComponent } from './components/toDo/calendar/calendar.component';
 import { CalendarPageComponent } from './pages/calendar-page/calendar-page.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
-import { usernameAvailabilityValidatorProvider } from './services/user/UserValidator';
 
 @NgModule({
   declarations: [
@@ -63,7 +62,6 @@ import { usernameAvailabilityValidatorProvider } from './services/user/UserValid
     CanvasJSAngularChartsModule,
     FullCalendarModule
   ],
-  providers: [usernameAvailabilityValidatorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

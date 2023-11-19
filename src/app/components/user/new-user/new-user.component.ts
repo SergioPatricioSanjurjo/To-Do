@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Iuser } from 'src/app/interfaces/Iuser';
-import { UsernameValidator, usernameAvailabilityValidator, usernameAvailabilityValidatorProvider } from 'src/app/services/user/UserValidator';
 import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
