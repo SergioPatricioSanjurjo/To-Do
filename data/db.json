@@ -22,7 +22,12 @@
     },
     {
       "user": "ragnarap",
-      "pass": "heyhey",
+      "pass": "hethet",
+      "id": 6
+    },
+    {
+      "user": "lamelo",
+      "pass": "ball5",
       "id": 8
     }
   ],
@@ -122,6 +127,8 @@
       "details": "levear para bow",
       "date": "2023-11-03",
       "id": 16
+      "details": "levear merchant a job 40",
+      "id": 7
     }
   ]
 }

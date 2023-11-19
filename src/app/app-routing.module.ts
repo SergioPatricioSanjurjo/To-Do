@@ -20,6 +20,7 @@ const routes: Routes = [
   {path:'editTask/:id', component:EditTodoComponent, canActivate:[AuthGuard]},
   {path:'calendar', component:CalendarPageComponent, canActivate:[AuthGuard]},
   {path:'currency', component:CurrencyPageComponent, canActivate:[AuthGuard]},
+  {path:'calendar', component:CalendarPageComponent, canActivate:[AuthGuard]},
   {path:'**', redirectTo:'home'}
 ];
 

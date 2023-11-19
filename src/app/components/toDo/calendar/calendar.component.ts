@@ -83,9 +83,10 @@ export class CalendarComponent implements OnInit{
     this.calendarOptions = { // cargo el calendar aca porque si no da un error de la API
       plugins: [dayGridPlugin, interactionPlugin],
       locale: esLocale,
-      initialView: 'dayGridMonth',
-      
+      initialView: 'dayGridMonth',  
     }
   }
 
+  
 }
+
