@@ -8,12 +8,32 @@
 .section{
     width: 100%;
 }
+@media(max-width: 1000px){
+    .section{
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+    } 
+}
 fieldset{
-    width: 40%;
+    width: 50%;
     background-color: var(--c-dBlue);
     border: 5px solid var(--c-lBlue);
     padding: 3rem;
     border-radius: 3rem;
+}
+@media(max-width: 1000px){
+    fieldset{
+        width: 70%;
+        margin-left: 15%;
+    } 
+}
+@media(max-width: 760px){
+    fieldset{
+        width: 70%;
+        margin-left: 0%;
+    } 
 }
 legend{
     width: 80%;
@@ -30,12 +50,32 @@ form{
     font-size: 2.5rem;
     border-radius: 25px;
 }
+@media(max-width: 760px){
+    form{
+        padding: 1rem 0;
+    }
+}
 .campo{
     margin: 2rem;
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 2rem;
     text-align: right;
+}
+@media(max-width: 1000px){
+    .campo{
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        text-align: left;
+    }
+}
+@media(max-width: 760px){
+    .campo{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
 .campo input{
     background-color:var(--c-white);

@@ -5,9 +5,20 @@
     margin: 2rem;
     padding: 0 2rem;
 }
+@media(max-width: 1000px){
+    #currencyTable{
+        margin: 0;
+        padding: .2rem;
+    }
+}
 table{
     opacity: 0.8;
     margin-bottom: 4rem;
+}
+@media(max-width: 760px){
+    table{
+        opacity: 1;
+    }
 }
 table:hover{
     opacity: 1;
@@ -22,10 +33,24 @@ table, th, td{
     padding: 1rem 5rem;
     text-align: center;
 }
+@media(max-width: 1000px){
+    table,th, td{
+        font-size: 2rem;
+        border: 2px solid var(--c-lBlue);
+        table-layout: fixed;
+        width: 98%;
+        padding: 0;
+    }
+}
 th{
     background-color: var(--c-lBlue);
     color: var(--c-dBlue);
 }
 .dateHour{
     font-size: 2rem;
+}
+@media(max-width: 1000px){
+    .dateHour{
+        font-size: 1.5rem;
+    }
 }

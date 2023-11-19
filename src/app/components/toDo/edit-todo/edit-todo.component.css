@@ -19,6 +19,12 @@ fieldset{
     padding: 3rem;
     border-radius: 3rem;
 }
+@media(max-width: 760px){
+    fieldset{
+        width: 95%;
+        padding: 1rem;
+    }
+}
 legend{
     width: 70%;
     text-align: center;
@@ -34,12 +40,25 @@ form{
     font-size: 2.5rem;
     border-radius: 25px;
 }
+@media(max-width: 760px){
+    form{
+        padding: 1rem 0;
+    }
+}
 .campo{
     margin: 2rem;
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 2rem;
     text-align: right;
+}
+@media(max-width: 760px){
+    .campo{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
 .campo input, textarea{
     background-color:var(--c-white);

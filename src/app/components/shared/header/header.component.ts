@@ -9,7 +9,7 @@ import { Iuser } from 'src/app/interfaces/Iuser';
 })
 export class HeaderComponent implements OnInit{
 
-  title: string = '...';
+  title: string = '.X.';
   private logUser?: Iuser;
 
   constructor(private userService:UserService) {}

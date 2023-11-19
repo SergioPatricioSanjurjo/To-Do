@@ -5,6 +5,11 @@ footer{
     color: var(--c-white);
     margin: 2rem;
 }
+@media (max-width: 760px) {
+    footer{
+        margin: 1rem;
+    }
+}
 h3{
     text-align: center;
     font-size: 3rem;
@@ -14,11 +19,18 @@ p{
     text-align: center;
     font-size: 2rem;
 }
+
 .redes{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
 }
+@media (max-width: 760px) {
+    .redes{
+        gap: 2rem;
+    }
+}
+
 a{
     text-decoration: none;
     height: 3rem;
@@ -34,5 +46,4 @@ a:hover{
     background-color: var(--c-white);
     color: var(--c-lBlue);
 }
-
 
