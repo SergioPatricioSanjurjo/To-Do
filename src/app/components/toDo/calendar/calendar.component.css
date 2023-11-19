@@ -1,0 +1,19 @@
+.container{
+    width: 100vw;
+    padding: 5vh 10vw;
+}
+.back{
+    background-color: var(--c-dBlue);
+    opacity: .8;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.back:hover{
+    opacity: 1;
+}
+full-calendar{
+    color: var(--c-white);
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+}

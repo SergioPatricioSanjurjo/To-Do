@@ -1,16 +1,6 @@
 {
   "users": [
     {
-      "user": "admin",
-      "password": "12345",
-      "id": 1
-    },
-    {
-      "user": "sergio",
-      "password": "sanjurjo",
-      "id": 2
-    },
-    {
       "user": "tisanti",
       "pass": "spiderman",
       "id": 3
@@ -26,24 +16,23 @@
       "id": 5
     },
     {
+      "user": "lamelo",
+      "pass": "ball5",
+      "id": 7
+    },
+    {
       "user": "ragnarap",
-      "pass": "hethet",
-      "id": 6
+      "pass": "heyhey",
+      "id": 8
     }
   ],
   "toDos": [
     {
-      "user": "otramenti",
-      "priority": 10,
-      "task": "irse",
-      "details": "tiene que irse de la seleccion ya mismo!",
-      "id": 2
-    },
-    {
       "user": "tisanti",
-      "priority": 4,
+      "priority": 6,
       "task": "de chill",
-      "details": "re alto el dolar no?",
+      "details": "re alto el dolar no? se fue a la mierda",
+      "date": "2023-11-20",
       "id": 3
     },
     {
@@ -56,44 +45,82 @@
     {
       "user": "tisanti",
       "priority": 7,
-      "task": "Pepe ",
-      "details": "fgdgdfg",
+      "task": "ELPEPE",
+      "details": "nananana bartman bergman",
+      "date": "2023-11-25",
       "id": 5
+    },
+    {
+      "user": "otramenti",
+      "priority": 5,
+      "task": "retirarse ya mismo",
+      "details": "tiene que irse de la seleccion",
+      "date": "2023-11-22",
+      "id": 8
+    },
+    {
+      "user": "otramenti",
+      "priority": 8,
+      "task": "partido en brasil",
+      "details": "partido de eliminatorias contra brasil, muy importante",
+      "date": "2023-11-21",
+      "id": 9
     },
     {
       "user": "tisanti",
       "priority": 6,
-      "task": "ñeeee",
-      "details": "uno",
-      "id": 6
+      "task": "cargando",
+      "details": "me voy al mes que viene",
+      "date": "2023-12-20",
+      "id": 10
+    },
+    {
+      "user": "lamelo",
+      "priority": 3,
+      "task": "partido de la nba",
+      "details": "partido contra los toronto raptors",
+      "date": "2023-11-28",
+      "id": 11
     },
     {
       "user": "ragnarap",
       "priority": 3,
       "task": "Merch",
-      "details": "levear merchant a job 40",
-      "id": 7
+      "details": "llevar a 35",
+      "date": "2023-11-20",
+      "id": 12
     },
     {
       "user": "ragnarap",
-      "priority": 7,
-      "task": "Levear Crusa",
-      "details": "llevar a 80 para Rachel",
-      "id": 8
+      "priority": 3,
+      "task": "Aco",
+      "details": "llevar a 35",
+      "date": "2023-11-20",
+      "id": 13
     },
     {
       "user": "ragnarap",
-      "priority": 10,
-      "task": "Subir Hunter",
-      "details": "Levear el hunter pa farmiar cartas",
-      "id": 9
+      "priority": 8,
+      "task": "Hunter",
+      "details": "levear archer a 50 para hunter",
+      "date": "2023-11-21",
+      "id": 14
+    },
+    {
+      "user": "tisanti",
+      "priority": 2,
+      "task": "Practica",
+      "details": "nanananan batman",
+      "date": "2023-11-19",
+      "id": 15
     },
     {
       "user": "ragnarap",
-      "priority": 5,
-      "task": "Levear Aco",
-      "details": "llevar a 35 a porrazos",
-      "id": 10
+      "priority": 4,
+      "task": "Thief",
+      "details": "levear para bow",
+      "date": "2023-11-03",
+      "id": 16
     }
   ]
 }

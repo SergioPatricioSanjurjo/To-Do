@@ -14,6 +14,7 @@
                     <td>{{item.priority}} </td>
                     <td>{{item.task}} </td>
                     <td>{{item.details}} </td>
+                    <td>{{item.date}} </td>
                     <td><a class="btnEdit" [routerLink]="['/editTask', item.id]">Editar</a></td>
                     <td><a class="btnDelete" href="/userHome" (click)="deleteTask(item.id)" >Eliminar</a></td>  
                 </tr>
