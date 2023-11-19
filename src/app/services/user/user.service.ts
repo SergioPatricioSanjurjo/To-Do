@@ -33,7 +33,7 @@ export class UserService {
     return this.http.get<Iuser>(`${this.url}/users/${id}`)
   }  
 
-  logInCheck(user: string, pass: string){
+ logInCheck(user: string, pass: string){
     this.getUsers().subscribe(users => {
       users.find(u => {
         if (u.pass === pass && u.user === user) {
@@ -49,6 +49,7 @@ export class UserService {
       }
     });
   }
+
   
   checkStatusAutenticacion(): Observable<boolean> {
     const token = localStorage.getItem('token')
