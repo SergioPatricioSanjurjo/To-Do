@@ -1,0 +1,49 @@
+h2{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--c-white);
+}
+
+#dolarsGraph{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+canvasjs-chart{
+    width: 70%;
+    height: 50rem;
+    align-self: center;
+    margin-top: 2rem;
+    margin-bottom: -4rem;
+}
+#dolarTable{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 2rem;
+    padding: 0 2rem;
+}
+table{
+    opacity: 0.8;
+    margin-bottom: 4rem;
+}
+table:hover{
+    opacity: 1;
+}
+table, th, td{
+    font-size: 3rem;
+    background-color: var(--c-dBlue);
+    border-collapse: collapse;
+    border: 3px solid var(--c-lBlue);
+    width: 70%;
+    align-self: center;
+    padding: 1rem 5rem;
+    text-align: center;
+}
+th{
+    background-color: var(--c-lBlue);
+    color: var(--c-dBlue);
+}
+.dateHour{
+    font-size: 2rem;
+}

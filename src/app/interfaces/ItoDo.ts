@@ -3,5 +3,6 @@ export interface ItoDo{
     priority:number,
     task: string,
     details:string,
+    date:string,
     id:number          
-}                    
+}        

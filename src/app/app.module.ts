@@ -25,6 +25,9 @@ import { NewTaskPageComponent } from './pages/new-task-page/new-task-page.compon
 import { DolarComponent } from './components/exchange/dolar/dolar.component';
 import { CurrencyPageComponent } from './pages/currency-page/currency-page.component';
 import { CurrencyComponent } from './components/exchange/currency/currency.component';
+import { CalendarComponent } from './components/toDo/calendar/calendar.component';
+import { CalendarPageComponent } from './pages/calendar-page/calendar-page.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 
@@ -49,14 +52,17 @@ import { CurrencyComponent } from './components/exchange/currency/currency.compo
     NewTaskPageComponent,
     DolarComponent,
     CurrencyPageComponent,
-    CurrencyComponent
+    CurrencyComponent,
+    CalendarComponent,
+    CalendarPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CanvasJSAngularChartsModule
+    CanvasJSAngularChartsModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

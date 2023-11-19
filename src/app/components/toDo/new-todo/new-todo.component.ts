@@ -19,11 +19,15 @@ export class NewTodoComponent {
     priority:['', [Validators.required]],
     activity:['', [Validators.required]],
     info:['', [Validators.required]],
+    date:['', [Validators.required]],
     id: 0
   })
 
-  constructor(private formBuilder: FormBuilder, private toDoService: ToDoService, private route: ActivatedRoute, private router: Router, private userService: UserService) { }
-
+  constructor(private formBuilder: FormBuilder, 
+              private toDoService: ToDoService, 
+              private route: ActivatedRoute,
+              private router: Router, 
+              private userService: UserService) { }
 
   agregarTask(){
     if (this.formulario.invalid) return;
@@ -35,6 +39,7 @@ export class NewTodoComponent {
       priority: this.formulario.controls['priority'].value,
       task: this.formulario.controls['activity'].value,
       details: this.formulario.controls['info'].value,
+      date: this.formulario.controls['date'].value,
       id: this.formulario.controls['id'].value
     }
     this.toDoService.postToDo(task).subscribe(

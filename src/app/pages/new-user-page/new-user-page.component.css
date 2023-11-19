@@ -1,0 +1,6 @@
+.back{
+    width: 100vw;
+    height: 70vh;
+    background-image: url(../../../assets/img/backgrounds/LogNew.jpg);
+    background-size: cover;
+}

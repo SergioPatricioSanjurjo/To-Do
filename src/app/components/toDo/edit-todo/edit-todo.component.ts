@@ -20,10 +20,16 @@ export class EditTodoComponent implements OnInit{
     priority:['', [Validators.required]],
     activity:['', [Validators.required]],
     info:['', [Validators.required]],
+    date:['', [Validators.required]],
     id: 0
   })
 
-  constructor(  private formBuilder: FormBuilder, private toDoService: ToDoService, private route: ActivatedRoute, private router: Router, private userService: UserService) { }
+  constructor(  private formBuilder: FormBuilder, 
+                private toDoService: ToDoService, 
+                private route: ActivatedRoute, 
+                private router: Router, 
+                private userService: UserService
+                ) { }
 
   ngOnInit(): void {
     this.initForm()
@@ -41,6 +47,7 @@ export class EditTodoComponent implements OnInit{
                 priority: [td.priority],
                 activity: [td.task],
                 info: [td.details],
+                date:[td.date],
                 id: [td.id]
                 })
               }
@@ -68,6 +75,7 @@ export class EditTodoComponent implements OnInit{
       priority: this.formulario.controls['priority'].value,
       task: this.formulario.controls['activity'].value,
       details: this.formulario.controls['info'].value,
+      date: this.formulario.controls['date'].value,
       id: this.formulario.controls['id'].value
     }
     this.toDoService.putTodo(task).subscribe(

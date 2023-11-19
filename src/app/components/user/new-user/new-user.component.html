@@ -1,7 +1,7 @@
-<section>
-    <form (ngSubmit)="saveUser()" [formGroup]="userForm">
-        <fieldset>
-            <legend>Nuevo Usuario</legend>
+<div class="container">
+    <fieldset>
+        <legend>Nuevo Usuario</legend>
+        <form (ngSubmit)="saveUser()" [formGroup]="userForm">
             <div class="inputs">
                 <label for="idUser">USUARIO:</label>
                 <input type="text" 
@@ -19,7 +19,7 @@
                 </span>
             </div>
             <div class="inputs">
-                <label for="idPass">Contraseña: </label>
+                <label for="idPass">CONTRASEÑA: </label>
                 <input type="password" 
                         id="idPass" 
                         placeholder="Ingrese Contraseña..." 
@@ -34,7 +34,10 @@
                     Minimo 5 Caracteres
                 </span>
             </div>
-            <button type="submit">Crear Usuario</button>
-        </fieldset>
-    </form>
-</section>
+            <div class="btn">
+                <input type="submit" value="Crear Usuario">
+            </div>
+        </form>
+    </fieldset>
+</div>
+

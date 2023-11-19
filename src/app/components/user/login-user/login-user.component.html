@@ -1,4 +1,5 @@
-<fieldset>
+<div class="container">
+  <fieldset>
     <legend>Iniciar Sesion</legend>
     <form [formGroup]="userForm">
       <div class="campo">
@@ -7,17 +8,18 @@
                 id="idLogUser"
                 placeholder="Usuario..."
                 formControlName="user">
-      </div>
+        </div>
       <div class="campo">
-        <label for="pass">Contraseña: </label>
+        <label for="pass">CONTRASEÑA: </label>
         <input [type]="showPassword ? 'text' : 'password'" 
                 id="idLogPAss" 
                 placeholder="Contraseña..." 
                 formControlName="pass">
-        <button (click)="toggleVisibility()">{{showPassword ? 'Esconder' : 'Mostrar'}}</button>
+        <i (click)="toggleVisibility()" id="eye" class="fa fa-eye"></i>
       </div>
-      <div class="campo">
+      <div class="btn">
         <input type="submit" value="Iniciar Sesion" (click)="userLogIn()">
       </div>
     </form>
   </fieldset>
+</div>  

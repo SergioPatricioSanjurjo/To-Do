@@ -20,7 +20,7 @@ export class DolarComponent implements OnInit{
 
   chartOptions = {
     animationEnabled: true,
-    theme: "dark1",
+    theme: "dark1",  //? "light1", "light2", "dark1", "dark2"
     exportEnabled: true,
     title: {
       text: "Precio De Venta Dolar"
@@ -46,9 +46,6 @@ export class DolarComponent implements OnInit{
   ngOnInit(): void {
     this.showDollars();
     this.fetchData();    
-    console.log(this.labels);
-    console.log(this.data);
-    console.log(this.dolarList);
   }
 
 
@@ -80,7 +77,13 @@ export class DolarComponent implements OnInit{
     });
   }
 
-
+  formatDateHour(dateHour: string) {
+    let fechaHora = new Date('2023-11-19T11:50:00.000Z');
+    let fecha = fechaHora.toLocaleDateString();
+    let hora = fechaHora.toLocaleTimeString();
+    let resp = hora + ' - ' + fecha;
+    return resp; 
+  }
 
 
 }

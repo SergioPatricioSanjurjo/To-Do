@@ -15,7 +15,10 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class ListTodoComponent implements OnInit{
 
-  constructor(private toDoService: ToDoService, private http: HttpClient, private userService: UserService, private router: Router) { }
+  constructor(private toDoService: ToDoService, 
+              private http: HttpClient, 
+              private userService: UserService, 
+              private router: Router) { }
 
   taskList: ItoDo[] | undefined = [];
 
@@ -30,7 +33,8 @@ export class ListTodoComponent implements OnInit{
 
   showTasks() {
     this.toDoService.getToDos().pipe(
-      map((td:ItoDo[]) => td.filter(td => td.user === this.getUser?.user)) // recibe todos los tasks y los filtra segun el usuario logeado
+      map((td:ItoDo[]) => td.filter(td => td.user === this.getUser?.user)        // recibe todos los tasks y los filtra segun el usuario logeado
+                                    .sort((a, b) => b.priority - a.priority))    //? ordena por prioridad
     ).subscribe({
       next: (td) =>{
         this.taskList = td; // aca se cargan los tasks filtrados
@@ -47,8 +51,7 @@ export class ListTodoComponent implements OnInit{
       {
         next: () =>{
           alert(`El task fue eliminado`)
-          //this.showTasks() //no debería poner esto acá, pero no puedo lograr que se actualice la pagina despues de eliminar una tarea
-        },
+          },
         error: (err) =>{
           console.log(err);
         }
