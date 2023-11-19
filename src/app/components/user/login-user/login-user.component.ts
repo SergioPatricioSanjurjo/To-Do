@@ -33,5 +33,10 @@ export class LoginUserComponent {
 
   toggleVisibility(){
     this.showPassword = !this.showPassword
+    const eyeIcon = document.querySelector('#eye');
+    if (eyeIcon) {
+      eyeIcon.classList.toggle('fa-eye');
+      eyeIcon.classList.toggle('fa-eye-slash');
+    }
   }
 }

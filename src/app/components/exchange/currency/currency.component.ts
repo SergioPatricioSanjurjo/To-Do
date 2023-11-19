@@ -47,7 +47,13 @@ export class CurrencyComponent implements OnInit{
         this.currencyPUru = data
       })
   }
-
+  formatDateHour(dateHour: string) {
+    let fechaHora = new Date('2023-11-19T11:50:00.000Z');
+    let fecha = fechaHora.toLocaleDateString();
+    let hora = fechaHora.toLocaleTimeString();
+    let resp = hora + ' - ' + fecha;
+    return resp; 
+  }
 
 
 

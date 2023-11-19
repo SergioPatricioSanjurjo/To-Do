@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+/**---------------COLORS-----------------------------------------------------------------------------------*/
+:root{
+    --c-dBlue:#06001f;
+    --c-lBlue:#3C91E6;
+    --c-white: #D1D8E0;
+    --c-lGreen: #9FD356;
+    --c-lRed:#A8230C;
+}
+
+/**---------------FONTS-----------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,300;1,400&display=swap");  
+/** font-family: 'Roboto Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto:wght@300&display=swap');
+/** font-family: 'Croissant One'; */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Gloria+Hallelujah&family=Roboto:wght@300&display=swap');
+/** font-family: 'Gloria Hallelujah', cursive; */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+/**simbolos**/
+
+/**---------------GLOBAL-----------------------------------------------------------------------------------*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background-color: var(--c-dBlue);
+    color: var(--c-white);
+}
+span{
+    color: var(--c-lBlue);
+}
+

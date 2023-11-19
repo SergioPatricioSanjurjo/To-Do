@@ -1,24 +1,41 @@
-<div class="main">
+<app-header></app-header>
+<app-logged-navbar></app-logged-navbar>
+<div class="back">
     <section class="seccion">
         <fieldset>
-            <legend>Agregar Tarea</legend>
+            <legend>Editar Tarea</legend>
             <form id="formulario" (ngSubmit)="editarTask()" [formGroup]="formulario">
                 <div class="campo">
                     <label for="prioridad">Prioridad:</label>
                     <input type="number" id="prioridad" min="1" max="10" formControlName="priority">
                 </div>
+                <div class="error">
+                    <span  *ngIf="formulario.controls['priority'].getError('required') && formulario.touched">
+                        Campo Requerido
+                    </span>
+                </div>
                 <div class="campo">
                     <label for="activity">Actividad:</label>
                     <input type="text" id="actividad" formControlName="activity">
                 </div>
+                <div class="error">
+                    <span  *ngIf="formulario.controls['activity'].getError('required') && formulario.touched">
+                        Campo Requerido
+                    </span>
+                </div>
                 <div class="campo">
                     <label for="info">Describa su actividad:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" cols="50" formControlName="info"></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="3" cols="31" formControlName="info"></textarea>
+                </div>
+                <div class="error">
+                    <span  *ngIf="formulario.controls['info'].getError('required') && formulario.touched">
+                        Campo Requerido
+                    </span>
                 </div>
                 <div class="campo">
                     <input type="hidden" id="id" name="id">
                 </div>
-                <div class="campo">
+                <div class="btn">
                     <input type="submit" value="Editar actividad" id="agregar">
                 </div>
             </form>
