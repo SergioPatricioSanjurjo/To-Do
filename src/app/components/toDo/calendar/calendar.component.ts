@@ -5,6 +5,9 @@ import { UserService } from 'src/app/services/user/user.service';
 import { map } from 'rxjs';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import esLocale from '@fullcalendar/core/locales/es';  //? Calendario en castellano
+import interactionPlugin from '@fullcalendar/interaction';
+
 
 @Component({
   selector: 'app-calendar',
@@ -13,11 +16,15 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 })
 export class CalendarComponent implements OnInit{
 
-  constructor(private toDoService: ToDoService, private userService: UserService) { }
+  constructor(private toDoService: ToDoService, 
+              private userService: UserService) { }
 
   taskList: ItoDo[] | undefined = [];
-
   eventsList: any[] | undefined = [];
+
+  
+
+
 
   cargarEvents(){
     this.toDoService.getToDos().pipe(
@@ -74,9 +81,12 @@ export class CalendarComponent implements OnInit{
     console.log(this.userService.currentUser?.user);
     this.cargarEvents()
     this.calendarOptions = { // cargo el calendar aca porque si no da un error de la API
-      plugins: [dayGridPlugin],
-      initialView: 'dayGridMonth'
+      plugins: [dayGridPlugin, interactionPlugin],
+      locale: esLocale,
+      initialView: 'dayGridMonth',  
     }
   }
 
+  
 }
+

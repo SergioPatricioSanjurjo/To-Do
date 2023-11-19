@@ -18,6 +18,7 @@ const routes: Routes = [
   {path:'userHome', component:UserHomePageComponent, canActivate:[AuthGuard]},
   {path:'newTask', component:NewTaskPageComponent, canActivate:[AuthGuard]},
   {path:'editTask/:id', component:EditTodoComponent, canActivate:[AuthGuard]},
+  {path:'calendar', component:CalendarPageComponent, canActivate:[AuthGuard]},
   {path:'currency', component:CurrencyPageComponent, canActivate:[AuthGuard]},
   {path:'calendar', component:CalendarPageComponent, canActivate:[AuthGuard]},
   {path:'**', redirectTo:'home'}

@@ -43,11 +43,11 @@ export class EditTodoComponent implements OnInit{
           {
             next: (td)=>{
               if(td){
-                this.formulario = this.formBuilder.group({
+               this.formulario = this.formBuilder.group({
                 priority: [td.priority],
                 activity: [td.task],
                 info: [td.details],
-                date: [td.date],
+                date:[td.date],
                 id: [td.id]
                 })
               }

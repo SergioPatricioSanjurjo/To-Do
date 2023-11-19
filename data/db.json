@@ -1,16 +1,6 @@
 {
   "users": [
     {
-      "user": "admin",
-      "password": "12345",
-      "id": 1
-    },
-    {
-      "user": "sergio",
-      "password": "sanjurjo",
-      "id": 2
-    },
-    {
       "user": "tisanti",
       "pass": "spiderman",
       "id": 3
@@ -26,6 +16,11 @@
       "id": 5
     },
     {
+      "user": "lamelo",
+      "pass": "ball5",
+      "id": 7
+    },
+    {
       "user": "ragnarap",
       "pass": "hethet",
       "id": 6
@@ -33,7 +28,7 @@
     {
       "user": "lamelo",
       "pass": "ball5",
-      "id": 7
+      "id": 8
     }
   ],
   "toDos": [
@@ -50,6 +45,7 @@
       "priority": 8,
       "task": "ganar partido",
       "details": "rookie of the year",
+      "date": "2023-11-20",
       "id": 4
     },
     {
@@ -59,13 +55,6 @@
       "details": "nananana bartman bergman",
       "date": "2023-11-25",
       "id": 5
-    },
-    {
-      "user": "ragnarap",
-      "priority": 3,
-      "task": "Merch",
-      "details": "levear merchant a job 40",
-      "id": 7
     },
     {
       "user": "otramenti",
@@ -98,6 +87,48 @@
       "details": "partido contra los toronto raptors",
       "date": "2023-11-28",
       "id": 11
+    },
+    {
+      "user": "ragnarap",
+      "priority": 3,
+      "task": "Merch",
+      "details": "llevar a 35",
+      "date": "2023-11-20",
+      "id": 12
+    },
+    {
+      "user": "ragnarap",
+      "priority": 3,
+      "task": "Aco",
+      "details": "llevar a 35",
+      "date": "2023-11-20",
+      "id": 13
+    },
+    {
+      "user": "ragnarap",
+      "priority": 8,
+      "task": "Hunter",
+      "details": "levear archer a 50 para hunter",
+      "date": "2023-11-21",
+      "id": 14
+    },
+    {
+      "user": "tisanti",
+      "priority": 2,
+      "task": "Practica",
+      "details": "nanananan batman",
+      "date": "2023-11-19",
+      "id": 15
+    },
+    {
+      "user": "ragnarap",
+      "priority": 4,
+      "task": "Thief",
+      "details": "levear para bow",
+      "date": "2023-11-03",
+      "id": 16
+      "details": "levear merchant a job 40",
+      "id": 7
     }
   ]
 }

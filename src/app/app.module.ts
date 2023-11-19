@@ -26,10 +26,8 @@ import { DolarComponent } from './components/exchange/dolar/dolar.component';
 import { CurrencyPageComponent } from './pages/currency-page/currency-page.component';
 import { CurrencyComponent } from './components/exchange/currency/currency.component';
 import { CalendarComponent } from './components/toDo/calendar/calendar.component';
-import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarPageComponent } from './pages/calendar-page/calendar-page.component';
-
-
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [

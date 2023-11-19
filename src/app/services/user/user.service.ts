@@ -6,7 +6,6 @@ import { BehaviorSubject, Observable, catchError, map, of, tap } from 'rxjs';
 import { enviroments } from 'src/environments/environments';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -32,22 +31,6 @@ export class UserService {
   getOneUser(id: number): Observable<Iuser> {
     return this.http.get<Iuser>(`${this.url}/users/${id}`)
   }  
-
-  /*logInCheck(user: string, pass: string){
-    this.getUsers().subscribe(users => {
-      users.find(u => {
-        if (u.pass === pass && u.user === user) {
-          this.logUser = u;
-          enviroments.currentUser = u.user;
-          //localStorage.clear();
-          localStorage.setItem('token', u.id.toString());
-          this.router.navigate(['/userHome']) 
-        }else{
-          alert ('Usuario o Contraseña Incorrectos');
-        }
-      });
-    });
-  }*/
 
   logInCheck(user: string, pass: string){
     this.getUsers().subscribe(users => {

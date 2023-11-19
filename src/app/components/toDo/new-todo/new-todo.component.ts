@@ -23,8 +23,11 @@ export class NewTodoComponent {
     id: 0
   })
 
-  constructor(private formBuilder: FormBuilder, private toDoService: ToDoService, private route: ActivatedRoute, private router: Router, private userService: UserService) { }
-
+  constructor(private formBuilder: FormBuilder, 
+              private toDoService: ToDoService, 
+              private route: ActivatedRoute,
+              private router: Router, 
+              private userService: UserService) { }
 
   agregarTask(){
     if (this.formulario.invalid) return;

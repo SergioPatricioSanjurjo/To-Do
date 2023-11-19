@@ -5,4 +5,4 @@ export interface ItoDo{
     details:string,
     date:string,
     id:number          
-}                    
+}        
