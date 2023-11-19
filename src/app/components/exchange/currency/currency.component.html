@@ -5,7 +5,7 @@
                 <th>MONEDA</th>
                 <th>COMPRA</th>
                 <th>VENTA</th>
-                <th>Actualizado</th>
+                <th>ACTUALIZADO</th>
             </tr>
         </thead>
         <tbody>
@@ -13,25 +13,25 @@
                 <td>{{currencyEuro.nombre}}</td>
                 <td>{{currencyEuro.compra}}</td>
                 <td>{{currencyEuro.venta}}</td>
-                <td>{{currencyEuro.fechaActualizacion}}</td>
+                <td class="dateHour">{{formatDateHour(currencyEuro.fechaActualizacion)}}</td>
             </tr>
            <tr *ngIf="currencyReal">
                 <td>{{currencyReal.nombre}}</td>
                 <td>{{currencyReal.compra}}</td>
                 <td>{{currencyReal.venta}}</td>
-                <td>{{currencyReal.fechaActualizacion}}</td>
+                <td class="dateHour">{{formatDateHour(currencyReal.fechaActualizacion)}}</td>
             </tr>
            <tr *ngIf="currencyPChi">
                 <td>{{currencyPChi.nombre}}</td>
                 <td>{{currencyPChi.compra}}</td>
                 <td>{{currencyPChi.venta}}</td>
-                <td>{{currencyPChi.fechaActualizacion}}</td>
+                <td class="dateHour">{{formatDateHour(currencyPChi.fechaActualizacion)}}</td>
             </tr>
            <tr *ngIf="currencyPUru">
                 <td>{{currencyPUru.nombre}}</td>
                 <td>{{currencyPUru.compra}}</td>
                 <td>{{currencyPUru.venta}}</td>
-                <td>{{currencyPUru.fechaActualizacion}}</td>
+                <td class="dateHour">{{formatDateHour(currencyPUru.fechaActualizacion)}}</td>
             </tr>
         </tbody>
     </table>

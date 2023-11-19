@@ -1,0 +1,78 @@
+.main{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--c-white);
+}
+.section{
+    width: 100%;
+}
+fieldset{
+    width: 40%;
+    background-color: var(--c-dBlue);
+    border: 5px solid var(--c-lBlue);
+    padding: 3rem;
+    border-radius: 3rem;
+}
+legend{
+    width: 80%;
+    text-align: center;
+    background-color: var(--c-lBlue);
+    color: var(--c-dBlue);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+form{
+    padding: 2rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+}
+.campo{
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 2rem;
+    text-align: right;
+}
+.campo input{
+    background-color:var(--c-white);
+    font-size: 2rem;
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+}
+.btn input{
+    background-color: var(--c-lBlue);
+    color: var(--c-dBlue);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 10px;
+}
+.btn input:hover{
+    background-color: var(--c-white);
+    color: var(--c-lBlue);
+}
+
+.error{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+}
+.error span{
+    background-color: var(--c-lRed);
+    color: var(--c-white);
+    border-radius: 2rem;
+    padding: .5rem;
+    width: 50%;
+}

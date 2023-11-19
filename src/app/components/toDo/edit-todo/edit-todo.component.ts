@@ -24,7 +24,12 @@ export class EditTodoComponent implements OnInit{
     id: 0
   })
 
-  constructor(  private formBuilder: FormBuilder, private toDoService: ToDoService, private route: ActivatedRoute, private router: Router, private userService: UserService) { }
+  constructor(  private formBuilder: FormBuilder, 
+                private toDoService: ToDoService, 
+                private route: ActivatedRoute, 
+                private router: Router, 
+                private userService: UserService
+                ) { }
 
   ngOnInit(): void {
     this.initForm()

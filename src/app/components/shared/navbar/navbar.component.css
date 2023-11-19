@@ -1,28 +1,17 @@
-/* Add a black background color to the top navigation */
-.navegacion {
-    background-color: rgb(49, 49, 49);
-    overflow: hidden;
+nav {
+  background-color: var(--c-lBlue);
+  overflow: hidden;
 }
-  
-  /* Style the links inside the navigation bar */
-.navegacion a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--c-dBlue);
+  text-align: center;
+  padding: 2rem 3rem;
+  font-size: 2rem;
 }
-  
-  /* Change the color of links on hover */
-.navegacion a:hover {
-    background-color: #ddd;
-    color: black;
-    cursor: pointer;
-}
-  
-  /* Add a color to the active/current link */
-.navegacion a.active {
-    background-color: #04AA6D;
-    color: white;
+a:hover {
+  background-color: var(--c-dBlue);
+  color: var(--c-white);
+  cursor: pointer;
 }
