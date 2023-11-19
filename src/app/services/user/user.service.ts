@@ -49,28 +49,17 @@ export class UserService {
     });
   }*/
 
-  logInCheck(user: string, pass: string) {
-    this.getUsers().subscribe(
-      users => {
-        const foundUser = users.find(u => u.pass === pass && u.user === user);
-  
-        if (foundUser) {
-          this.logUser = foundUser;
-          enviroments.currentUser = foundUser.user;
-          localStorage.setItem('token', foundUser.id.toString());
-          this.router.navigate(['/userHome']);
-        } else {
-          alert('Usuario o Contraseña Incorrectos');
+  logInCheck(user: string, pass: string){
+    this.getUsers().subscribe(users => {
+      users.find(u => {
+        if (u.pass === pass && u.user === user) {
+          this.logUser = u;
+          enviroments.currentUser = u.user;
+          //localStorage.clear();
+          localStorage.setItem('token', u.id.toString());
+          this.router.navigate(['/userHome']) 
         }
-      },
-      error => {
-        console.log('Usuario no encontrado. Credenciales incorrectas.');
-        console.error('Error al obtener usuarios:', error);
-        // Manejar el error según sea necesario
-      }
-    );
-  }
-
+      });
       if(!localStorage.getItem('token')){
         alert ('Usuario o Contraseña Incorrectos');
       }

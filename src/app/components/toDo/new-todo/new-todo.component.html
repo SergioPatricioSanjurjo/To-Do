@@ -34,6 +34,11 @@
                     <label for="fecha">Fecha:</label>
                     <input type="date" id="fecha" formControlName="date">
                 </div>
+                <div class="error">
+                    <span  *ngIf="formulario.controls['info'].getError('required') && formulario.touched">
+                        Campo Requerido
+                    </span>
+                </div>
                 <div class="campo">
                     <input type="hidden" id="id" name="id">
                 </div>

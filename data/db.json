@@ -29,6 +29,11 @@
       "user": "ragnarap",
       "pass": "hethet",
       "id": 6
+    },
+    {
+      "user": "lamelo",
+      "pass": "ball5",
+      "id": 7
     }
   ],
   "toDos": [
@@ -65,7 +70,7 @@
     {
       "user": "otramenti",
       "priority": 5,
-      "task": "retirarse porfiss",
+      "task": "retirarse ya mismo",
       "details": "tiene que irse de la seleccion",
       "date": "2023-11-22",
       "id": 8
@@ -85,6 +90,14 @@
       "details": "me voy al mes que viene",
       "date": "2023-12-20",
       "id": 10
+    },
+    {
+      "user": "lamelo",
+      "priority": 3,
+      "task": "partido de la nba",
+      "details": "partido contra los toronto raptors",
+      "date": "2023-11-28",
+      "id": 11
     }
   ]
 }
