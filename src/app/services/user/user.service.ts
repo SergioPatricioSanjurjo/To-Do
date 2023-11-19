@@ -28,7 +28,10 @@ export class UserService {
   getUsers(): Observable<Iuser[]> {
     return this.http.get<Iuser[]>(`${this.url}/users`)
   }
-  
+
+  getOneUser(id: number): Observable<Iuser> {
+    return this.http.get<Iuser>(`${this.url}/users/${id}`)
+  }  
 
   logInCheck(user: string, pass: string){
     this.getUsers().subscribe(users => {
@@ -41,7 +44,9 @@ export class UserService {
           this.router.navigate(['/userHome']) 
         }
       });
-      alert ('Usuario o Contraseña Incorrectos');
+      if(!localStorage.getItem('token')){
+        alert ('Usuario o Contraseña Incorrectos');
+      }
     });
   }
   

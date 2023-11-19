@@ -57,13 +57,13 @@
       "user": "tisanti",
       "priority": 7,
       "task": "Pepe ",
-      "details": "nananana bartman bergman",
+      "details": "fgdgdfg",
       "id": 5
     },
     {
       "user": "tisanti",
-      "priority": 1,
-      "task": "hjdfgjhdfj",
+      "priority": 6,
+      "task": "ñeeee",
       "details": "uno",
       "id": 6
     },
@@ -73,6 +73,27 @@
       "task": "Merch",
       "details": "levear merchant a job 40",
       "id": 7
+    },
+    {
+      "user": "ragnarap",
+      "priority": 7,
+      "task": "Levear Crusa",
+      "details": "llevar a 80 para Rachel",
+      "id": 8
+    },
+    {
+      "user": "ragnarap",
+      "priority": 10,
+      "task": "Subir Hunter",
+      "details": "Levear el hunter pa farmiar cartas",
+      "id": 9
+    },
+    {
+      "user": "ragnarap",
+      "priority": 5,
+      "task": "Levear Aco",
+      "details": "llevar a 35 a porrazos",
+      "id": 10
     }
   ]
 }

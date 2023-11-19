@@ -1,0 +1,38 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--c-white);
+    margin: 2rem;
+}
+h3{
+    text-align: center;
+    font-size: 3rem;
+}
+p{
+    margin: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.redes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+a{
+    text-decoration: none;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2.5rem;
+    background-color: var(--c-lBlue);
+    text-align: center;
+    border-radius: 25%;
+    color: var(--c-white);
+    align-content: center;
+}
+a:hover{
+    background-color: var(--c-white);
+    color: var(--c-lBlue);
+}
+
+
