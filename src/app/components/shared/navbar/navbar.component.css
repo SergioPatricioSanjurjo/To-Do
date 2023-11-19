@@ -15,3 +15,9 @@ a:hover {
   color: var(--c-white);
   cursor: pointer;
 }
+@media (max-width: 1000px){
+  nav{
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -33,3 +33,4 @@ npm install @canvasjs/angular-charts
 npm i @fullcalendar/core @fullcalendar/angular @fullcalendar/daygrid
 
 npm @fullcalendar/interaction
+

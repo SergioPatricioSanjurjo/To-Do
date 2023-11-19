@@ -49,11 +49,13 @@ export class UserService {
     });
   }
 
+
   checkUsernameExists(username: string): Observable<boolean> {
     return this.getUsers().pipe(
       map(users => users.some(u => u.user === username))
     );
   }
+
   
   checkStatusAutenticacion(): Observable<boolean> {
     const token = localStorage.getItem('token')

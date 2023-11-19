@@ -2,11 +2,26 @@
     width: 100vw;
     padding: 5vh 10vw;
 }
+@media(max-width: 1000px){
+    .container{
+        padding: 4vh 2vw;
+    }
+}
 .back{
     background-color: var(--c-dBlue);
     opacity: .8;
     border-radius: 1rem;
     padding: 2rem;
+}
+@media(max-width: 1000px){
+    .back{
+        padding: 1rem;
+    }
+}
+@media(max-width: 760px){
+    .back{
+        opacity: 1;
+    }
 }
 .back:hover{
     opacity: 1;
@@ -16,4 +31,14 @@ full-calendar{
     font-size: 3rem;
     text-align: center;
     padding: 1rem;
+}
+@media(max-width: 1000px){
+    full-calendar{
+        font-size: 2rem;
+    }
+}
+@media(max-width: 760px){
+    full-calendar{
+        font-size: 1rem;
+    }
 }
