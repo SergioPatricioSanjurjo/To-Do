@@ -26,9 +26,14 @@
       "id": 6
     },
     {
-      "user": "lamelo",
-      "pass": "ball5",
-      "id": 8
+      "user": "santi",
+      "pass": "tisanti",
+      "id": 9
+    },
+    {
+      "user": "eltisanti",
+      "pass": "martinez",
+      "id": 10
     }
   ],
   "toDos": [
@@ -119,6 +124,30 @@
       "details": "levear para bow",
       "date": "2023-11-03",
       "id": 16
+    },
+    {
+      "user": "eltisanti",
+      "priority": 7,
+      "task": "validator",
+      "details": "validator check",
+      "date": "2023-11-24",
+      "id": 17
+    },
+    {
+      "user": "eltisanti",
+      "priority": 8,
+      "task": "excelente",
+      "details": "muy bien!",
+      "date": "2023-11-24",
+      "id": 18
+    },
+    {
+      "user": "eltisanti",
+      "priority": 2,
+      "task": "evento",
+      "details": "probando limite del calendario",
+      "date": "2023-11-23",
+      "id": 19
     }
   ]
 }

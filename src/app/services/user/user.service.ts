@@ -48,6 +48,12 @@ export class UserService {
       }
     });
   }
+
+  checkUsernameExists(username: string): Observable<boolean> {
+    return this.getUsers().pipe(
+      map(users => users.some(u => u.user === username))
+    );
+  }
   
   checkStatusAutenticacion(): Observable<boolean> {
     const token = localStorage.getItem('token')
@@ -121,24 +127,5 @@ export class UserService {
       console.log(error);
     }
   }
-
-
-  
-
-  existingUsers: Iuser [] | undefined = []
-
-  checkUsernameAvailability(username: Iuser): boolean {
-    // Verifica si el nombre de usuario ya existe
-    this.getUsers().subscribe(
-      {
-        next: (u)=>{
-          this.existingUsers = u
-        }
-      }
-    )
-    return !this.existingUsers?.includes(username);
-  }
-
-  
 }
 
