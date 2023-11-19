@@ -33,14 +33,6 @@
   ],
   "toDos": [
     {
-      "user": "tisanti",
-      "priority": 6,
-      "task": "de chill",
-      "details": "re alto el dolar no? se fue a la mierda",
-      "date": "2023-11-20",
-      "id": 3
-    },
-    {
       "user": "rookie",
       "priority": 8,
       "task": "ganar partido",
@@ -74,7 +66,7 @@
     },
     {
       "user": "tisanti",
-      "priority": 6,
+      "priority": 8,
       "task": "cargando",
       "details": "me voy al mes que viene",
       "date": "2023-12-20",
@@ -117,7 +109,7 @@
       "priority": 2,
       "task": "Practica",
       "details": "nanananan batman",
-      "date": "2023-11-19",
+      "date": "2023-11-20",
       "id": 15
     },
     {
@@ -127,8 +119,6 @@
       "details": "levear para bow",
       "date": "2023-11-03",
       "id": 16
-      "details": "levear merchant a job 40",
-      "id": 7
     }
   ]
 }

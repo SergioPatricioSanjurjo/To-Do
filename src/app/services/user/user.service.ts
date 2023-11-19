@@ -122,6 +122,23 @@ export class UserService {
     }
   }
 
+
+  
+
+  existingUsers: Iuser [] | undefined = []
+
+  checkUsernameAvailability(username: Iuser): boolean {
+    // Verifica si el nombre de usuario ya existe
+    this.getUsers().subscribe(
+      {
+        next: (u)=>{
+          this.existingUsers = u
+        }
+      }
+    )
+    return !this.existingUsers?.includes(username);
+  }
+
   
 }
 
