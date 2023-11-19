@@ -8,7 +8,7 @@
                     <input type="number" id="prioridad" min="1" max="10" formControlName="priority">
                 </div>
                 <div class="error">
-                    <span  *ngIf="formulario.controls['priority'].getError('required') && formulario.touched">
+                    <span  *ngIf="formulario.controls['priority'].getError('required') && formulario.get('priority')?.touched">
                         Campo Requerido
                     </span>
                 </div>
@@ -17,7 +17,7 @@
                     <input type="text" id="actividad" formControlName="activity">
                 </div>
                 <div class="error">
-                    <span  *ngIf="formulario.controls['activity'].getError('required') && formulario.touched">
+                    <span  *ngIf="formulario.controls['activity'].getError('required') && formulario.get('activity')?.touched">
                         Campo Requerido
                     </span>
                 </div>
@@ -26,7 +26,7 @@
                     <textarea id="mensaje" name="mensaje" rows="4" cols="31" formControlName="info"></textarea>
                 </div>
                 <div class="error">
-                    <span  *ngIf="formulario.controls['info'].getError('required') && formulario.touched">
+                    <span  *ngIf="formulario.controls['info'].getError('required') && formulario.get('info')?.touched">
                         Campo Requerido
                     </span>
                 </div>
@@ -35,7 +35,7 @@
                     <input type="date" id="fecha" formControlName="date">
                 </div>
                 <div class="error">
-                    <span  *ngIf="formulario.controls['info'].getError('required') && formulario.touched">
+                    <span  *ngIf="formulario.controls['date'].getError('required') && formulario.get('date')?.touched">
                         Campo Requerido
                     </span>
                 </div>
