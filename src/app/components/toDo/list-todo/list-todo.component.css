@@ -47,6 +47,7 @@ th{
 }
 th:hover{
     cursor: pointer;
+    color: var(--c-white);
 }
 .btnDelete{
     color: var(--c-lRed);
