@@ -34,7 +34,7 @@ export class ListTodoComponent implements OnInit{
   showTasks() {
     this.toDoService.getToDos().pipe(
       map((td:ItoDo[]) => td.filter(td => td.user === this.getUser?.user)        // recibe todos los tasks y los filtra segun el usuario logeado
-                                    .sort((a, b) => b.priority - a.priority))    //? ordena por prioridad
+                                   /* .sort((a, b) => b.priority - a.priority)*/)    //? ordena por prioridad
     ).subscribe({
       next: (td) =>{
         this.taskList = td; // aca se cargan los tasks filtrados
@@ -57,6 +57,22 @@ export class ListTodoComponent implements OnInit{
         }
       }
     )
+  }
+
+    sortTablePri() {
+    if(this.taskList){
+      this.taskList.sort((a, b) => a.priority < b.priority ? 1 : a.priority > b.priority ? -1 : 0)
+    }
+  }
+  sortTableTask() {
+    if(this.taskList){
+      this.taskList.sort((a, b) => a.task > b.task ? 1 : a.task < b.task ? -1 : 0)
+    }
+  }
+  sortTableDate() {
+    if(this.taskList){
+      this.taskList.sort((a, b) => a.date > b.date ? 1 : a.date < b.date ? -1 : 0)
+    }
   }
 
 }
