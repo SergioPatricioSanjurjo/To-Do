@@ -69,14 +69,6 @@
       "id": 9
     },
     {
-      "user": "tisanti",
-      "priority": 8,
-      "task": "cargando",
-      "details": "me voy al mes que viene",
-      "date": "2023-12-20",
-      "id": 10
-    },
-    {
       "user": "lamelo",
       "priority": 3,
       "task": "partido de la nba",
@@ -91,14 +83,6 @@
       "details": "llevar a 35",
       "date": "2023-11-20",
       "id": 12
-    },
-    {
-      "user": "ragnarap",
-      "priority": 3,
-      "task": "Aco",
-      "details": "llevar a 35",
-      "date": "2023-11-20",
-      "id": 13
     },
     {
       "user": "ragnarap",

@@ -12,33 +12,35 @@ export class ToDoService {
 
   url:string = enviroments.baseUrl
 
+  api:string = 'http://localhost:3000/tasks'
+
   constructor(private router: Router,
               private http: HttpClient
               ) { }
 
 
   getToDos(): Observable<ItoDo[]> {
-    return this.http.get<ItoDo[]>(`${this.url}/toDos`)
+    return this.http.get<ItoDo[]>(`${this.api}/getTasks`)
   }
 
-  getToDo(id: number): Observable<ItoDo> {
-    return this.http.get<ItoDo>(`${this.url}/toDos/${id}`)
+  getToDo(id: any): Observable<ItoDo> {
+    return this.http.get<ItoDo>(`${this.api}/getTask/${id}`)
   }  
 
-  deleteToDo(id: number): Observable<ItoDo> {
-    return this.http.delete<ItoDo>(`${this.url}/toDos/${id}`)
+  deleteToDo(id: any): Observable<ItoDo> {
+    return this.http.delete<ItoDo>(`${this.api}/deleteTask/${id}`)
   }
 
   postToDo(toDo: ItoDo): Observable<ItoDo> {
     let headers = { 'content-type': 'application/json'}  
     let body = JSON.stringify(toDo);
-    return this.http.post<ItoDo>(`${this.url}/toDos`, body, {'headers': headers})
+    return this.http.post<ItoDo>(`${this.api}/postTask`, body, {'headers': headers})
   }
 
-  putTodo(toDo: ItoDo): Observable<ItoDo> {
+  putTodo(toDo: ItoDo, id: string): Observable<ItoDo> {
     let headers = {'Content-type': 'application/json'}  
-    let body = JSON.stringify(toDo);
-    return this.http.put<ItoDo>(`${this.url}/toDos/${toDo.id}`, body, {'headers': headers})
+    //let body = JSON.stringify(toDo);
+    return this.http.patch<ItoDo>(`${this.api}/putTask/${id}`, toDo, {'headers': headers})
   }
 
   /*putTodo(task: ItoDo): Observable<ItoDo>{

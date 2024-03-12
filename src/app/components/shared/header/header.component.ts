@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit{
   showTitle() {
     const token = localStorage.getItem('token')
     if (token) {
-      this.userService.getOneUser(+token).subscribe(
+      this.userService.getOneUser(token).subscribe(
         user => {
           this.title = user.user;
         }

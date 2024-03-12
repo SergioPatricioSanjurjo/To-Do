@@ -37,18 +37,18 @@ export class EditTodoComponent implements OnInit{
 
   initForm(){
     this.route.params.subscribe (async param=>{
-      const id = +param['id']
-      if (!isNaN(id)){
+      const id = param['id']
+      if (id){
         this.toDoService.getToDo(id).subscribe(
           {
             next: (td)=>{
               if(td){
                this.formulario = this.formBuilder.group({
+                _id: [id],
                 priority: [td.priority],
                 activity: [td.task],
                 info: [td.details],
-                date:[td.date],
-                id: [td.id]
+                date:[td.date]
                 })
               }
             },
@@ -75,10 +75,9 @@ export class EditTodoComponent implements OnInit{
       priority: this.formulario.controls['priority'].value,
       task: this.formulario.controls['activity'].value,
       details: this.formulario.controls['info'].value,
-      date: this.formulario.controls['date'].value,
-      id: this.formulario.controls['id'].value
+      date: this.formulario.controls['date'].value
     }
-    this.toDoService.putTodo(task).subscribe(
+    this.toDoService.putTodo(task, this.formulario.controls['_id'].value).subscribe(
       {
         next: () =>{
           this.router.navigate(['/userHome'])

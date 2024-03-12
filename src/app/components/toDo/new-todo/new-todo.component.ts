@@ -39,8 +39,7 @@ export class NewTodoComponent {
       priority: this.formulario.controls['priority'].value,
       task: this.formulario.controls['activity'].value,
       details: this.formulario.controls['info'].value,
-      date: this.formulario.controls['date'].value,
-      id: this.formulario.controls['id'].value
+      date: this.formulario.controls['date'].value
     }
     this.toDoService.postToDo(task).subscribe(
       {

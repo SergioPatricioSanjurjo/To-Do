@@ -26,7 +26,7 @@ export class NewUserComponent {
     const user: Iuser = {
       user: this.userForm.controls['user'].value,
       pass: this.userForm.controls['pass'].value,
-      id: 0
+      _id: ''
       }
     this.userService.postUser(user)
     console.log(user);

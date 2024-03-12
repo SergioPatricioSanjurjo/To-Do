@@ -24,7 +24,7 @@ export class ListTodoComponent implements OnInit{
 
   ngOnInit(): void {
     this.showTasks()
-    console.log(this.getUser);
+    //console.log(this.getUser);
   }
 
   get getUser():Iuser | undefined{
@@ -44,7 +44,7 @@ export class ListTodoComponent implements OnInit{
     })
   }
 
-  deleteTask(id: number) {
+  deleteTask(id: any) {
     const ok = confirm(`Desea eliminar el task con el id: ${id}`)
     if(!ok) return;
     this.toDoService.deleteToDo(id).subscribe(

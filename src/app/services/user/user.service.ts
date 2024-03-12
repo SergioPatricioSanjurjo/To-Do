@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Iuser } from 'src/app/interfaces/Iuser';
 import { BehaviorSubject, Observable, catchError, map, of, tap } from 'rxjs';
 import { enviroments } from 'src/environments/environments';
+import { cl } from '@fullcalendar/core/internal-common';
 
 
 @Injectable({
@@ -12,6 +13,7 @@ import { enviroments } from 'src/environments/environments';
 export class UserService {
 
   url:string = enviroments.baseUrl;
+  api:string = 'http://localhost:3000/users'
   private logUser?: Iuser;
   
 
@@ -25,11 +27,11 @@ export class UserService {
   }
 
   getUsers(): Observable<Iuser[]> {
-    return this.http.get<Iuser[]>(`${this.url}/users`)
+    return this.http.get<Iuser[]>(`${this.api}/getUsers`)
   }
 
-  getOneUser(id: number): Observable<Iuser> {
-    return this.http.get<Iuser>(`${this.url}/users/${id}`)
+  getOneUser(id: string): Observable<Iuser> {
+    return this.http.get<Iuser>(`${this.api}/getUser/${id}`)
   }  
 
   logInCheck(user: string, pass: string){
@@ -39,7 +41,7 @@ export class UserService {
           this.logUser = u;
           enviroments.currentUser = u.user;
           //localStorage.clear();
-          localStorage.setItem('token', u.id.toString());
+          localStorage.setItem('token', u._id);
           this.router.navigate(['/userHome']) 
         }
       });
@@ -62,11 +64,11 @@ export class UserService {
     if (!token) {
       return of(false)
     }
-    return this.http.get<Iuser>(`${this.url}/users/${token}`)
+    return this.http.get<Iuser>(`${this.api}/getUser/${token}`)
       .pipe(
         tap(u => this.logUser = u),
         map(u => {
-          console.log('Respuesta', !!u);
+          //console.log('Respuesta', !!u);
           return !!u}),
         catchError(err => of(false))
       )
@@ -74,7 +76,7 @@ export class UserService {
 
   async postUser(user: Iuser){
     try{
-      await fetch(`${this.url}/users`,
+      await fetch(`${this.api}/postUser`,
         {
           method:'POST',
           body: JSON.stringify(user),
@@ -115,7 +117,7 @@ export class UserService {
     }
   }
 
-  async putUser(user: Iuser){
+  /*async putUser(user: Iuser){
     try{
       await fetch(`${this.url}/users/${user.id}`,
                 {
@@ -128,6 +130,6 @@ export class UserService {
     }catch (error){
       console.log(error);
     }
-  }
+  }*/
 }
 
