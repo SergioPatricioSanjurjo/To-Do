@@ -78,7 +78,7 @@ export class CalendarComponent implements OnInit{
   calendarOptions: CalendarOptions | any  //este es el calendario
 
   ngOnInit(): void {
-    console.log(this.userService.currentUser?.user);
+    //console.log(this.userService.currentUser?.user);
     this.cargarEvents()
     this.calendarOptions = { // cargo el calendar aca porque si no da un error de la API
       plugins: [dayGridPlugin, interactionPlugin],

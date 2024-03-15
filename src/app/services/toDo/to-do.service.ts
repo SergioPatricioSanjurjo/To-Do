@@ -12,6 +12,7 @@ export class ToDoService {
 
   url:string = enviroments.baseUrl
 
+  //api:string = 'https://backendtodo-s2q4.onrender.com/tasks'
   api:string = 'http://localhost:3000/tasks'
 
   constructor(private router: Router,
@@ -28,6 +29,7 @@ export class ToDoService {
   }  
 
   deleteToDo(id: any): Observable<ItoDo> {
+    console.log("entre al service");
     return this.http.delete<ItoDo>(`${this.api}/deleteTask/${id}`)
   }
 
