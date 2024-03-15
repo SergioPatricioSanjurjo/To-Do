@@ -12,8 +12,8 @@ export class ToDoService {
 
   url:string = enviroments.baseUrl
 
-  //api:string = 'https://backendtodo-s2q4.onrender.com/tasks'
-  api:string = 'http://localhost:3000/tasks'
+  api:string = 'https://backendtodo-s2q4.onrender.com/tasks'
+  //api:string = 'http://localhost:3000/tasks'
 
   constructor(private router: Router,
               private http: HttpClient
